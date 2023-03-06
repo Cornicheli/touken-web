@@ -1,0 +1,234 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+/* <----- header -----> */
+
+.ctn-touken {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.icon-touken {
+  height: 3rem;
+}
+
+/* <----- header -----> */
+
+/* <----- main -----> */
+
+.invitacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.ctn-inv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-height: 70vh;
+}
+.ctn-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* <----- main -----> */
+
+.ctn-text {
+  line-height: 50px;
+  text-align: start;
+  font-size: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  padding: 5px;
+  text-align: left;
+}
+
+.gif {
+  width: 20rem;
+}
+
+.img-gif {
+  width: 100%;
+}
+
+/* <----- form -----> */
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.text-input {
+  height: 4rem;
+  border-radius: 100px;
+  font-size: 1.5rem;
+  border: green 2px solid;
+  width: 75%;
+  padding: 5px;
+}
+
+.text-input:focus-visible {
+  outline: none;
+  border: solid green 2px;
+}
+
+.send-mail {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.btn-submit {
+  margin-top: 5rem;
+  height: 3rem;
+  width: 40%;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 100px;
+  background-color: #7a33ff;
+}
+.btn-submit:hover {
+  background-color: #7a33ff;
+  cursor: pointer;
+}
+/* <----- form -----> */
+
+/* <----- footer ------> */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.ctn-logo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.logo-footer {
+  width: 45%;
+}
+
+.ctn-red-social {
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  width: 275px;
+  border: solid 2px grey;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.proyect {
+  display: flex;
+  align-items: center;
+}
+
+.myproyect {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.logo-ft {
+  margin-left: 3rem;
+}
+
+.link-red-social {
+  margin: 0.5rem;
+}
+
+/* <----- footer ------> */
+
+@media screen and (max-width: 850px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    transition: 1s;
+  }
+  .ctn-text {
+    line-height: 40px;
+    text-align: start;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .btn-submit {
+    width: 60%;
+    transition: 1s;
+  }
+  .gif {
+    display: flex;
+    align-items: center;
+    width: 15rem;
+    transition: 2s;
+  }
+  .send-mail {
+    padding: 0.5rem;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  footer {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .myproyect {
+    margin-bottom: 1rem;
+  }
+  .btn-submit {
+    width: 65%;
+    margin-top: 1.5rem;
+    transition: 1s;
+  }
+  .logo-ft {
+    margin-left: 0rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logo-ft {
+    margin-left: 0rem;
+  }
+  .text-ft {
+    font-size: 1rem;
+  }
+  .ctn-red-social {
+    padding: 3px;
+  }
+  .btn-submit {
+    width: 65%;
+    margin-top: 1rem;
+    transition: 1s;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+  border: solid 2px white;
+  border-radius: 18px;
+}

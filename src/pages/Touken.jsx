@@ -1,0 +1,54 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import "../style/style3.css";
+import touken from "../img/touken.png";
+import iconTouken from "../img/icon-touken.png";
+import logo from "../img/logo.png";
+
+export default function Touken() {
+  return (
+    <>
+      <main className="touken">
+        <figure className="ctn-touken">
+          <img className="icon-touken" src={touken} alt="touken" />
+        </figure>
+        <section>
+          <div>
+            <h1 className="title-touken">
+              💃🏻 ¡Qué bueno que quieras sumarte! 🕺
+              <br />
+            </h1>
+            <h2 className="sub-title-touken">
+              Te presentamos a<strong> tu primer touken, </strong>
+              lo verás reflejado cuando <br />
+              crees
+              <strong> tu cuenta</strong> en la app.
+            </h2>
+          </div>
+          <figure>
+            <img src={iconTouken} alt="icon touken" />
+          </figure>
+
+          <div className="ctn-link-touken">
+            <a className="link-text-touken" href="#">
+              ¡Esperá! Hay más 🤫
+            </a>
+
+            <a className="link-logo" href="#">
+              <img src="../img/arrow-down.png" alt="" />
+            </a>
+          </div>
+        </section>
+
+        <footer>
+          <div className="proyect">
+            <a className="myproyect" href="#">
+              <img className="logo-ft" src={logo} alt="logo alerta" />
+              Quiero crear un proyecto
+            </a>
+          </div>
+        </footer>
+      </main>
+    </>
+  );
+}
