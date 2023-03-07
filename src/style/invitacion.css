@@ -4,31 +4,29 @@
   box-sizing: border-box;
   font-family: serif;
 }
-
 /* <----- header -----> */
-
 .ctn-touken {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 10vh;
+  margin-top: 36px;
 }
-
 .icon-touken {
   height: 3rem;
 }
-
 /* <----- header -----> */
-
 /* <----- main -----> */
-
 .invitacion {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  background-image: url("../img//bg-invitacion.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 .ctn-inv {
   display: flex;
   flex-direction: row;
@@ -40,38 +38,32 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
 /* <----- main -----> */
-
 .ctn-text {
-  line-height: 50px;
+  line-height: 45px;
   text-align: start;
-  font-size: 2rem;
+  font-size: 48px;
+  margin-bottom: 60px;
 }
-
 .title {
   font-size: 2.5rem;
   padding: 5px;
   text-align: left;
 }
-
 .gif {
   width: 20rem;
+  margin-right: 170px;
 }
-
 .img-gif {
   width: 100%;
 }
-
 /* <----- form -----> */
-
 form {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
-
 .text-input {
   height: 4rem;
   border-radius: 100px;
@@ -80,21 +72,18 @@ form {
   width: 75%;
   padding: 5px;
 }
-
 .text-input:focus-visible {
   outline: none;
   border: solid green 2px;
 }
-
 .send-mail {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
 }
-
 .btn-submit {
-  margin-top: 5rem;
+  margin-top: 99px;
   height: 3rem;
   width: 40%;
   font-size: 1.5rem;
@@ -107,84 +96,105 @@ form {
   cursor: pointer;
 }
 /* <----- form -----> */
-
 /* <----- footer ------> */
-
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 10vh;
 }
-
 .ctn-logo-footer {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40%;
 }
-
 .logo-footer {
   width: 45%;
 }
-
 .ctn-red-social {
   display: flex;
   align-items: center;
   border-radius: 100px;
-  width: 275px;
+  width: 235px;
   border: solid 2px grey;
   justify-content: space-between;
   padding: 5px;
+  margin-bottom: 36px;
 }
-
 .proyect {
   display: flex;
   align-items: center;
+  margin-bottom: 36px;
 }
-
 .myproyect {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
 }
-
 .logo-ft {
   margin-left: 3rem;
 }
-
 .link-red-social {
   margin: 0.5rem;
 }
-
+.text-ft {
+  font-size: 20px;
+}
 /* <----- footer ------> */
-
 @media screen and (max-width: 850px) {
   section {
     flex-direction: column;
     align-items: center;
     transition: 1s;
   }
-  .ctn-text {
-    line-height: 40px;
-    text-align: start;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .btn-submit {
-    width: 60%;
-    transition: 1s;
+  .logo-ft {
+    margin-left: 0rem;
   }
   .gif {
-    display: flex;
-    align-items: center;
-    width: 15rem;
-    transition: 2s;
+    display: none;
+  }
+  .btn-submit {
+    width: 75%;
+    transition: 1s;
   }
   .send-mail {
     padding: 0.5rem;
     align-items: center;
+  }
+  .ctn-text {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .ctn-info {
+    padding: 1.2rem;
+  }
+  footer {
+    flex-direction: column;
+  }
+  .gif {
+    display: none;
+  }
+  .btn-submit {
+    margin-top: 20px;
+    width: 75%;
+  }
+  .logo-ft {
+    margin-left: 0rem;
+  }
+  .proyect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+  .none {
+    display: none;
+  }
+  .ctn-text {
+    margin-bottom: 40px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -193,11 +203,14 @@ footer {
     align-items: center;
     flex-direction: column;
   }
+  .ctn-red-social {
+    width: 230px;
+  }
   .myproyect {
     margin-bottom: 1rem;
   }
   .btn-submit {
-    width: 65%;
+    width: 75%;
     margin-top: 1.5rem;
     transition: 1s;
   }
@@ -205,7 +218,6 @@ footer {
     margin-left: 0rem;
   }
 }
-
 @media screen and (max-width: 450px) {
   .logo-ft {
     margin-left: 0rem;
@@ -215,18 +227,17 @@ footer {
   }
   .ctn-red-social {
     padding: 3px;
+    width: 200px;
   }
   .btn-submit {
-    width: 65%;
+    width: 75%;
     margin-top: 1rem;
     transition: 1s;
   }
 }
-
 body::-webkit-scrollbar {
   width: 15px;
 }
-
 body::-webkit-scrollbar-thumb {
   background-color: black;
   border: solid 2px white;

@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../style/style3.css";
 import touken from "../img/touken.png";
 import iconTouken from "../img/icon-touken.png";
 import logo from "../img/logo.png";
+import arrowDown from "../img/arrowDown.png";
+import "../style/touken.css";
 
 export default function Touken() {
   return (
@@ -35,13 +36,13 @@ export default function Touken() {
             </a>
 
             <a className="link-logo" href="#">
-              <img src="../img/arrow-down.png" alt="" />
+              <img src={arrowDown} alt="arrown down" />
             </a>
           </div>
         </section>
 
         <footer>
-          <div className="proyect">
+          <div className="proyect-touken">
             <a className="myproyect" href="#">
               <img className="logo-ft" src={logo} alt="logo alerta" />
               Quiero crear un proyecto

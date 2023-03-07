@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../style/style2.css";
+import "../style/invitacion.css";
 import touken from "../img/touken.png";
 import logo from "../img/logo.png";
 import logoInst from "../img/logoInst.png";
@@ -74,18 +74,23 @@ export default function Invitacion() {
               Quiero crear un proyecto
             </Link>
           </div>
+          <div className="none"></div>
 
           <div className="ctn-red-social">
-            <a className="link-red-social" href="">
-              <img src={logoInst} alt="Instagram" />
-            </a>
-            <a className="link-red-social" href="">
-              <img src={logoLink} alt="LinkeIn" />
-            </a>
+            <div>
+              <a className="link-red-social" href="">
+                <img src={logoInst} alt="Instagram" />
+              </a>
+              <a className="link-red-social" href="">
+                <img src={logoLink} alt="LinkeIn" />
+              </a>
+            </div>
             <p className="text-ft">Próximamente</p>
           </div>
 
-          <div></div>
+          <div className="none"></div>
+          <div className="none"></div>
+          <div className="none"></div>
         </footer>
       </main>
     </>
