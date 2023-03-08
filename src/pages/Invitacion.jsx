@@ -6,6 +6,8 @@ import logo from "../img/logo.png";
 import logoInst from "../img/logoInst.png";
 import logoLink from "../img/logoLink.png";
 import gif from "../img/gif.png";
+import axios from "axios";
+import API_URL from "../api/api";
 
 export default function Invitacion() {
   const [email, setEmail] = useState("");
@@ -18,6 +20,33 @@ export default function Invitacion() {
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
+
+  try {
+    let data = JSON.stringify({
+      email: email,
+    });
+    console.log(data);
+
+    let config = {
+      method: "post",
+      url: `${API_URL}/api/auth/user?type=user`,
+      handleEmailChange,
+      headers: {
+        Authorization: "Basic Y2h1bGk6MTIzNDU2",
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+    axios(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  } catch (error) {
+    console.log(error);
+  }
 
   return (
     <>
