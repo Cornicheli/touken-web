@@ -12,6 +12,12 @@ import API_URL from "../api/api";
 export default function Invitacion() {
   const [email, setEmail] = useState("");
 
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => {
+    setClick(true);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(`Email enviado: ${email}`);
@@ -29,7 +35,7 @@ export default function Invitacion() {
 
     let config = {
       method: "post",
-      url: `${API_URL}/api/auth/user?type=user`,
+      url: `${API_URL}/api/user?type=user`,
       handleEmailChange,
       headers: {
         Authorization: "Basic Y2h1bGk6MTIzNDU2",
@@ -80,12 +86,20 @@ export default function Invitacion() {
                 className="text-input"
                 type="email"
                 placeholder="Dejanos tu email"
-                value={email}
-                onChange={handleEmailChange}
+                // value={email}
                 required
               />
+              {click ? (
+                <h2 style={{ marginTop: 15, textDecoration: "underline" }}>
+                  Tu email ah sido registrado. Ya eres parte!
+                </h2>
+              ) : null}
 
-              <button className="btn-submit" type="submit">
+              <button
+                className="btn-submit"
+                type="submit"
+                onClick={handleClick}
+              >
                 Quiero ser parte
               </button>
             </form>
