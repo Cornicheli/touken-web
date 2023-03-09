@@ -5,7 +5,7 @@ import touken from "../img/touken.png";
 import logo from "../img/logo.png";
 import logoInst from "../img/logoInst.png";
 import logoLink from "../img/logoLink.png";
-import gif from "../img/gif.png";
+import gif from "../img/gif.gif";
 import axios from "axios";
 import API_URL from "../api/api";
 

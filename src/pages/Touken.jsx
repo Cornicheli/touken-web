@@ -35,9 +35,9 @@ export default function Touken() {
               ¡Esperá! Hay más 🤫
             </a>
 
-            <a className="link-logo" href="#">
+            <Link className="link-logo" to="/invifriends">
               <img src={arrowDown} alt="arrown down" />
-            </a>
+            </Link>
           </div>
         </section>
 

@@ -52,11 +52,24 @@
   text-align: left;
 }
 .gif {
-  width: 20rem;
+  border-radius: 1rem;
+  height: 19rem;
+  width: 16rem;
+
+  -webkit-box-shadow: 9px 8px 0px -1px rgba(113, 77, 182, 1);
+  -moz-box-shadow: 9px 8px 0px -1px rgba(113, 77, 182, 1);
+  box-shadow: 9px 8px 0px -1px rgba(113, 77, 182, 1);
+
   margin-right: 170px;
 }
 .img-gif {
-  width: 100%;
+  position: relative;
+  display: flex;
+  background-position: 5%;
+  border-radius: 1rem;
+  width: 16rem;
+  height: 19rem;
+  border: solid 2px #ffff54;
 }
 /* <----- form -----> */
 form {
