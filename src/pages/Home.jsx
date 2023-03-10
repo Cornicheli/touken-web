@@ -19,17 +19,6 @@ function Home() {
     }, 1000);
   }, []);
 
-  /* const [loading, setLoading] = React.useState(false);
-  React.useEffect(() => {
-    setTimeout(() => {
-    setLoading(true)
-  }, 10000)},[]
-  );
-
-  if (!loading) {
-    return <div></div>;
-  }
-*/
   return (
     <section className="ctn-main fade-in" style={{ opacity: divOpacity }}>
       <figure className="ctn-logo">

@@ -72,15 +72,12 @@ export default function Invitacion() {
 
             <p className="ctn-text">
               A las primeras
-              <strong>1000 personas</strong> le regalaremos
+              <strong> 1000 personas</strong> le regalaremos
               <strong> su primer touken.</strong> <br />
               Durante un año repartiremos
-              <strong>el 5% de</strong>
-              <strong>
-                nuestros <br />
-                ingresos
-              </strong>
-              con los que lo tengan.
+              <strong> el 5% de</strong>
+              <strong>nuestros <br />
+                ingresos</strong> con los que lo tengan.
             </p>
             </h1>
 
@@ -109,7 +106,7 @@ export default function Invitacion() {
           </div>
 
           <div className="image-container"><figure className="gif">
-            <img className="img-gif" src={gif} alt="" />
+            {/*<img className="img-gif" src={gif} alt="" />*/}
           </figure>
           </div>
         </section>
