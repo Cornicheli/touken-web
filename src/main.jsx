@@ -6,6 +6,7 @@ import Invitacion from "./pages/Invitacion";
 import InviFriends from "./pages/InviFriends";
 import Touken from "./pages/Touken";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
