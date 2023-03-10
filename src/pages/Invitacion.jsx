@@ -11,44 +11,49 @@ import API_URL from "../api/api";
 
 export default function Invitacion() {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  // const [click, setClick] = useState(false);
 
-  const [click, setClick] = useState(false);
-
-  const handleClick = () => {
-    setClick(true);
-  };
+  // const handleClick = () => {
+  //   setClick(true);
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!email) {
+      setMessage("el email es requerido");
+    }
     console.log(`Email enviado: ${email}`);
   };
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+  // const handleEmailChange = (e) => {
+  //   setEmail(e.target.value);
+  // };
 
   try {
-    let data = JSON.stringify({
-      email: email,
-    });
-    console.log(data);
+    // let data = JSON.stringify({
+    //   email: email,
+    // });
+    // console.log(data);
 
     let config = {
-      method: "post",
-      url: `${API_URL}/api/user?type=user`,
-      handleEmailChange,
+      // method: "post",
+      // url: `${API_URL}/api/user?type=user`,
+      // handleEmailChange,
       headers: {
         Authorization: "Basic Y2h1bGk6MTIzNDU2",
         "Content-Type": "application/json",
       },
-      data: data,
+      // data: data,
     };
-    axios(config)
+    axios
+      .post(`${API_URL}/api/user?type=user`, email, config)
       .then((response) => {
         console.log(JSON.stringify(response.data));
+        setMessage(response.data.msg);
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.response.data);
       });
   } catch (error) {
     console.log(error);
@@ -56,19 +61,18 @@ export default function Invitacion() {
 
   return (
     <>
-      <main className="invitacion">
+      <main className="Invitacion">
         <figure className="ctn-touken">
           <img className="icon-touken" src={touken} alt="touken" />
         </figure>
 
-        <section className="ctn-inv">
+        <section className="ctnInv">
           <div className="ctn-info">
             <br />
             <h1 className="title">
-              <strong>Pronto</strong> lanzaremos la app. 
-            <br />
-            <br />
-            
+              <strong>Pronto</strong> lanzaremos la app.
+              <br />
+            </h1>
 
             <p className="ctn-text">
               A las primeras
@@ -76,38 +80,45 @@ export default function Invitacion() {
               <strong> su primer touken.</strong> <br />
               Durante un año repartiremos
               <strong> el 5% de</strong>
-              <strong>nuestros <br />
-                ingresos</strong> con los que lo tengan.
+              <strong>
+                nuestros <br />
+                ingresos
+              </strong>
+              con los que lo tengan.
             </p>
-            </h1>
 
             <form onSubmit={handleSubmit} className="send-mail">
               <input
                 className="text-input"
-                type="email"
                 placeholder="Dejanos tu email"
-                // value={email}
-                required
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
-              {click ? (
+              {message ? (
                 <h2 style={{ marginTop: 15, textDecoration: "underline" }}>
-                  Tu email ah sido registrado. Ya eres parte!
+                  {message}
                 </h2>
               ) : null}
-
+              {/* {click ? (
+                <h2 style={{ marginTop: 15, textDecoration: "underline" }}>
+                  {message}
+                </h2>
+              ) : null} */}
               <button
                 className="btn-submit"
                 type="submit"
-                onClick={handleClick}
+                // onClick={handleClick}
               >
                 Quiero ser parte
               </button>
             </form>
           </div>
 
-          <div className="image-container"><figure className="gif">
-            {/*<img className="img-gif" src={gif} alt="" />*/}
-          </figure>
+          <div className="image-container">
+            <figure className="gif">
+              {/*<img className="img-gif" src={gif} alt="" />*/}
+            </figure>
           </div>
         </section>
 

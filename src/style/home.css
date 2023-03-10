@@ -1,5 +1,4 @@
-
-@import url('https://fonts.cdnfonts.com/css/aileron');
+@import url("https://fonts.cdnfonts.com/css/aileron");
 
 * {
   margin: 0%;
@@ -8,11 +7,10 @@
   overflow-x: hidden;
   font-style: normal;
 }
-.subtitle{
+.subtitle {
   position: absolute;
   font-size: 40px;
   line-height: 48px;
-
 }
 
 .ctn-main {
@@ -26,12 +24,12 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.img-button{
+.img-button {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.img-top{
+.img-top {
   position: absolute;
   top: 0;
   right: 0;
@@ -88,7 +86,7 @@ section {
   height: 3.5rem;
   margin: 0.5rem;
   background-color: #7a33ff;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .btn-link {
@@ -110,31 +108,29 @@ section {
   text-decoration: none;
   color: white;
 }
-.invitation-tile{
+.invitation-tile {
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease-out;
   font-style: normal;
 }
-.icon-tile{ 
+.icon-tile {
   margin-right: 40px;
   transition: all 0.3s ease-out;
 }
-.link:hover .icon-tile{
+.link:hover .icon-tile {
   margin-right: 0px;
   transition: all 0.3s ease-out;
-
 }
 .fade-in {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-.link:hover .invitation-tile{
+.link:hover .invitation-tile {
   visibility: visible;
   opacity: 1;
   transition: all 0.3s ease-in;
 }
-
 
 .ctn-link {
   display: flex;
@@ -146,4 +142,21 @@ section {
   border-radius: 1rem;
   background-color: greenyellow;
   margin: 1rem;
+}
+
+@media only screen and (max-width: 360px) {
+  .subtitle {
+    font-size: 20px;
+  }
+  .link {
+    position: relative;
+    z-index: 9999;
+    width: 300px;
+    height: 50px;
+  }
+  .ctn-logo {
+    margin-top: 5rem;
+    position: relative;
+    z-index: 9999;
+  }
 }
