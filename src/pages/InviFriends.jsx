@@ -15,7 +15,7 @@ export default function InviFriends() {
       </figure>
       <section>
         <div>
-          <h1 className="title-touken">
+          <h1 className="titleTouken">
             💃🏻 ¡Qué bueno que quieras sumarte! 🕺
             <br />
             ¡Antes de lanzar la app te contaremos cómo crear tu primer proyecto!
@@ -33,9 +33,12 @@ export default function InviFriends() {
           </h2>
         </div>
         <div className="ctnLink">
-          <button className="btn-link">
-            <img src={Vector} alt="Vector" />
-          </button>
+          <div className="link-inv">
+            <button className="btn-link">
+              <span className="inv-tile">Touken</span>
+              <img className="logo-btn" src={Vector} alt="Vector" />
+            </button>
+          </div>
         </div>
       </section>
 

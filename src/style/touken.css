@@ -116,3 +116,33 @@ footer {
     font-size: 30px;
   }
 }
+
+@media only screen and (max-width: 350px) {
+  .ctn-touken {
+    height: 5vh;
+    margin-top: 36px;
+  }
+
+  .icon-touken {
+    height: 2rem;
+  }
+
+  .title-touken {
+    font-size: 1rem;
+  }
+  .sub-title-touken {
+    font-size: 1rem;
+  }
+  .link-text-touken {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .ctn-logo-inv {
+    width: 11rem;
+    height: 11rem;
+  }
+  .img-logo-inv {
+    width: 100%;
+    height: 100%;
+  }
+}

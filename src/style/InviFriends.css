@@ -4,6 +4,10 @@
   font-weight: 500;
   font-size: 30px;
 }
+.titleTouken {
+  text-align: center;
+  font-size: 2rem;
+}
 /* <----- TEXT -----> */
 
 /* <----- BTN -----> */
@@ -17,21 +21,56 @@
   border-radius: 1rem;
 }
 .btn-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 1rem;
   background-color: #7a33ff;
   width: 100%;
+  color: white;
 }
 .btn-link:hover {
   background-color: #7a33ff;
+  border: none;
+}
+.logo-btn {
+  margin-left: 15px;
 }
 /* <----- BTN -----> */
 
+.inv-tile {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  font-style: normal;
+}
+.icon-tile {
+  margin-right: 40px;
+  transition: all 0.3s ease-out;
+}
+.link-inv:hover .icon-tile {
+  margin-right: 0px;
+  transition: all 0.3s ease-out;
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.link-inv:hover .inv-tile {
+  border: solid 0px;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
+
 /* <----- IMG -----> */
 .ctnGifTwo {
+  overflow: hidden;
   border-radius: 1rem;
   width: 416px;
   height: 211px;
   box-shadow: 10px 5px 0px 0px rgba(189, 153, 255, 1);
+  overflow: hiddentext-input;
 }
 .gifTwo {
   border: solid 2px #befd50;
@@ -40,3 +79,34 @@
   height: 100%;
 }
 /* <----- IMG -----> */
+
+@media only screen and (max-width: 768px) {
+  .titleTouken {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .textFriend {
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .ctnGifTwo {
+    width: 210px;
+    height: 110px;
+  }
+  .ctnLink {
+    width: 328px;
+    height: 48px;
+  }
+  .ctn-red-social {
+    height: 51px;
+    width: 220px;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+  }
+  .link-red-social {
+    height: 21px;
+    width: 21px;
+    border-radius: 0px;
+  }
+}

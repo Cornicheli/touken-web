@@ -26,10 +26,10 @@ function Home() {
       </figure>
       <div>
         <h1 className="title">Sé parte de proyectos creativos y</h1>
-        <strong><h1>
-          
+        <strong>
+          <h1>
             <span
-            className="subtitle"
+              className="subtitle"
               style={{
                 marginLeft: animation ? "0px" : "-100%",
                 transition: "1s",
@@ -37,13 +37,13 @@ function Home() {
             >
               haz la diferencia.
             </span>
-        </h1>
-          </strong>
+          </h1>
+        </strong>
       </div>
 
       <Link className="link" to="invitacion">
-        <Link className="link-submit" >
-          <span className="invitation-tile">A ver</span>{" "}
+        <Link className="link-submit">
+          <span className="invitation-tile">A ver</span>
           <span className="icon-tile">👀</span>
         </Link>
       </Link>

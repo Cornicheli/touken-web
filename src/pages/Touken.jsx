@@ -26,8 +26,8 @@ export default function Touken() {
               <strong> tu cuenta</strong> en la app.
             </h2>
           </div>
-          <figure>
-            <img src={iconTouken} alt="icon touken" />
+          <figure className="ctn-logo-inv">
+            <img className="img-logo-inv" src={iconTouken} alt="icon touken" />
           </figure>
 
           <div className="ctn-link-touken">
