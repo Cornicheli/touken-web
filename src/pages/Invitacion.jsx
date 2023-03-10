@@ -65,13 +65,15 @@ export default function Invitacion() {
           <div className="ctn-info">
             <br />
             <h1 className="title">
-              <strong>Pronto</strong> lanzaremos la app. <br />
-            </h1>
+              <strong>Pronto</strong> lanzaremos la app. 
+            <br />
+            <br />
+            
 
             <p className="ctn-text">
               A las primeras
               <strong>1000 personas</strong> le regalaremos
-              <strong>su primer touken.</strong> <br />
+              <strong> su primer touken.</strong> <br />
               Durante un año repartiremos
               <strong>el 5% de</strong>
               <strong>
@@ -80,6 +82,7 @@ export default function Invitacion() {
               </strong>
               con los que lo tengan.
             </p>
+            </h1>
 
             <form onSubmit={handleSubmit} className="send-mail">
               <input
@@ -105,9 +108,10 @@ export default function Invitacion() {
             </form>
           </div>
 
-          <figure className="gif">
+          <div className="image-container"><figure className="gif">
             <img className="img-gif" src={gif} alt="" />
           </figure>
+          </div>
         </section>
 
         <footer>
