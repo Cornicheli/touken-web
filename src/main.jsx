@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Invitacion from "./pages/Invitacion";
 import InviFriends from "./pages/InviFriends";
 import Touken from "./pages/Touken";
-import Splash from "./pages/Splash";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
