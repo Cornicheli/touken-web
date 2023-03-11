@@ -8,56 +8,43 @@ import logoLink from "../img/logoLink.png";
 import gif from "../img/gif.gif";
 import axios from "axios";
 import API_URL from "../api/api";
+import Spinner from "../components/Spinner/Spinner";
 
 export default function Invitacion() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  // const [click, setClick] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  // const handleClick = () => {
-  //   setClick(true);
-  // };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email) {
       setMessage("el email es requerido");
+      return;
     }
-    console.log(`Email enviado: ${email}`);
+
+    setLoading(true);
+
+    try {
+      const config = {
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: 'Basic Y2h1bGk6MTIzNDU2'
+        }
+      }
+
+      const { data } = await axios.post(`${API_URL}/api/user?type=creator`, { email }, config);
+      setMessage(data.msg);
+
+    } catch (error) {
+      console.log(error);
+      setMessage(error.response.data.msg);
+    }
+
+    setEmail('');
+    setLoading(false);
   };
 
-  // const handleEmailChange = (e) => {
-  //   setEmail(e.target.value);
-  // };
 
-  try {
-    // let data = JSON.stringify({
-    //   email: email,
-    // });
-    // console.log(data);
-
-    let config = {
-      // method: "post",
-      // url: `${API_URL}/api/user?type=user`,
-      // handleEmailChange,
-      headers: {
-        Authorization: "Basic Y2h1bGk6MTIzNDU2",
-        "Content-Type": "application/json",
-      },
-      // data: data,
-    };
-    axios
-      .post(`${API_URL}/api/user?type=user`, email, config)
-      .then((response) => {
-        console.log(JSON.stringify(response.data));
-        setMessage(response.data.msg);
-      })
-      .catch((error) => {
-        console.log(error.response.data);
-      });
-  } catch (error) {
-    console.log(error);
-  }
 
   return (
     <>
@@ -105,13 +92,22 @@ export default function Invitacion() {
                   {message}
                 </h2>
               ) : null} */}
-              <button
-                className="btn-submit"
-                type="submit"
-                // onClick={handleClick}
-              >
-                Quiero ser parte
-              </button>
+
+              {
+                !loading ? (
+                  <button
+                    className="btn-submit"
+                    type="submit"
+                    // onClick={handleClick}
+                  >
+                    Quiero ser parte
+                  </button>
+                ) : (
+                  <Spinner/>
+                )
+              }
+
+
             </form>
           </div>
 
