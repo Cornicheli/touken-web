@@ -1,71 +1,56 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "../style/invitacion.css";
-import touken from "../img/touken.png";
-import logo from "../img/logo.png";
-import logoInst from "../img/logoInst.png";
-import logoLink from "../img/logoLink.png";
-import gif from "../img/gif.gif";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "../../style/invitacion.css";
+import touken from "../../img/touken.png";
+import logoInst from "../../img/logoInst.png";
+import logoLink from "../../img/logoLink.png";
+import gif from "../../img/gif.gif";
+import logo from "../../img/logo.png";
 import axios from "axios";
-import API_URL from "../api/api";
+import API_URL from "../../api/api";
+import Spinner from "../../components/Spinner/Spinner";
 
-export default function Invitacion() {
+export default function InvitacionB2C() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  // const [click, setClick] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  // const handleClick = () => {
-  //   setClick(true);
-  // };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email) {
       setMessage("el email es requerido");
+      return;
     }
-    console.log(`Email enviado: ${email}`);
+    setLoading(true);
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Basic Y2h1bGk6MTIzNDU2",
+        },
+      };
+      const { data } = await axios.post(
+        `${API_URL}/api/user?type=user`,
+        { email },
+        config,
+        localStorage.setItem("session", "test"),
+        navigate("/toukenb2c")
+      );
+      setMessage(data.msg);
+    } catch (error) {
+      console.log(error);
+      setMessage(error.response.data.msg);
+    }
+    setEmail("");
+    setLoading(false);
   };
-
-  // const handleEmailChange = (e) => {
-  //   setEmail(e.target.value);
-  // };
-
-  try {
-    // let data = JSON.stringify({
-    //   email: email,
-    // });
-    // console.log(data);
-
-    let config = {
-      // method: "post",
-      // url: `${API_URL}/api/user?type=user`,
-      // handleEmailChange,
-      headers: {
-        Authorization: "Basic Y2h1bGk6MTIzNDU2",
-        "Content-Type": "application/json",
-      },
-      // data: data,
-    };
-    axios
-      .post(`${API_URL}/api/user?type=user`, email, config)
-      .then((response) => {
-        console.log(JSON.stringify(response.data));
-        setMessage(response.data.msg);
-      })
-      .catch((error) => {
-        console.log(error.response.data);
-      });
-  } catch (error) {
-    console.log(error);
-  }
-
   return (
     <>
       <main className="Invitacion">
         <figure className="ctn-touken">
           <img className="icon-touken" src={touken} alt="touken" />
         </figure>
-
         <section className="ctnInv">
           <div className="ctn-info">
             <br />
@@ -73,7 +58,6 @@ export default function Invitacion() {
               <strong>Pronto</strong> lanzaremos la app.
               <br />
             </h1>
-
             <p className="ctn-text">
               A las primeras
               <strong> 1000 personas</strong> le regalaremos
@@ -86,7 +70,6 @@ export default function Invitacion() {
               </strong>
               con los que lo tengan.
             </p>
-
             <form onSubmit={handleSubmit} className="send-mail">
               <input
                 className="text-input"
@@ -100,37 +83,27 @@ export default function Invitacion() {
                   {message}
                 </h2>
               ) : null}
-              {/* {click ? (
-                <h2 style={{ marginTop: 15, textDecoration: "underline" }}>
-                  {message}
-                </h2>
-              ) : null} */}
-              <button
-                className="btn-submit"
-                type="submit"
-                // onClick={handleClick}
-              >
-                Quiero ser parte
-              </button>
+              {!loading ? (
+                <button className="btn-submit" type="submit">
+                  Quiero ser parte
+                </button>
+              ) : (
+                <Spinner />
+              )}
             </form>
           </div>
-
           <div className="image-container">
-            <figure className="gif">
-              {/*<img className="img-gif" src={gif} alt="" />*/}
-            </figure>
+            <figure className="gif"></figure>
           </div>
         </section>
-
         <footer>
           <div className="proyect">
-            <Link className="myproyect" to="/touken">
+            <Link className="myproyect" to="/homeb2b">
               <img className="logo-ft" src={logo} alt="logo alerta" />
               Quiero crear un proyecto
             </Link>
           </div>
           <div className="none"></div>
-
           <div className="ctn-red-social">
             <div>
               <a className="link-red-social" href="">
@@ -142,7 +115,6 @@ export default function Invitacion() {
             </div>
             <p className="text-ft">Próximamente</p>
           </div>
-
           <div className="none"></div>
           <div className="none"></div>
           <div className="none"></div>

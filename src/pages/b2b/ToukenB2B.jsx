@@ -1,13 +1,21 @@
-import React, { useState } from "react";
-import gifTwo from "../img/gifTwo.gif";
-import Vector from "../img/Vector.png";
-import logo from "../img/logo.png";
-import touken from "../img/touken.png";
-import logoInst from "../img/logoInst.png";
-import logoLink from "../img/logoLink.png";
-import "../style/InviFriends.css";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import gifTwo from "../../img/gifTwo.gif";
+import Vector from "../../img/Vector.png";
+import logo from "../../img/logo.png";
+import touken from "../../img/touken.png";
+import logoInst from "../../img/logoInst.png";
+import logoLink from "../../img/logoLink.png";
+import "../../style/InviFriends.css";
 
-export default function InviFriends() {
+export default function ToukenB2B() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    let user = localStorage.getItem("session");
+    if (user === null) {
+      navigate("/");
+    }
+  }, []);
   return (
     <main className="touken">
       <figure className="ctn-touken">
@@ -24,7 +32,6 @@ export default function InviFriends() {
         <figure className="ctnGifTwo">
           <img className="gifTwo" src={gifTwo} alt="icon touken" />
         </figure>
-
         <div className="ctn-link-touken">
           <h2 className="textFriend">
             <strong>Invita</strong> a otros <strong>creadores</strong>
@@ -41,7 +48,6 @@ export default function InviFriends() {
           </div>
         </div>
       </section>
-
       <footer style={{ justifyContent: "center", alignItems: "center" }}>
         <div className="ctn-red-social">
           <div>
