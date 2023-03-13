@@ -110,6 +110,9 @@ form {
   align-items: flex-start;
 }
 .btn-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 99px;
   height: 3rem;
   width: 40%;
@@ -117,6 +120,7 @@ form {
   color: white;
   border-radius: 100px;
   background-color: #7a33ff;
+  text-decoration: none;
 }
 .btn-submit:hover {
   background-color: #bd99ff;

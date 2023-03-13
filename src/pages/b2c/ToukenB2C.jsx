@@ -1,12 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import touken from "../img/touken.png";
-import iconTouken from "../img/icon-touken.png";
-import logo from "../img/logo.png";
-import arrowDown from "../img/arrowDown.png";
-import "../style/touken.css";
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import touken from "../../img/touken.png";
+import iconTouken from "../../img/icon-touken.png";
+import logo from "../../img/logo.png";
+import arrowDown from "../../img/arrowDown.png";
+import "../../style/touken.css";
 
-export default function Touken() {
+export default function ToukenB2C() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    let user = localStorage.getItem("session");
+    if (user === null) {
+      navigate("/");
+    }
+  }, []);
   return (
     <>
       <main className="touken">
@@ -20,27 +27,23 @@ export default function Touken() {
               <br />
             </h1>
             <h2 className="sub-title-touken">
-              Te presentamos a<strong> tu primer touken, </strong>
-              lo verás reflejado cuando <br />
-              crees
-              <strong> tu cuenta</strong> en la app.
+              ¡Cuando lancemos la app te contaremos cómo
+              <strong>canjear</strong> tu <strong>touken</strong> <br /> de
+              regalo!
             </h2>
           </div>
           <figure className="ctn-logo-inv">
             <img className="img-logo-inv" src={iconTouken} alt="icon touken" />
           </figure>
-
           <div className="ctn-link-touken">
             <a className="link-text-touken" href="#">
               ¡Esperá! Hay más 🤫
             </a>
-
-            <Link className="link-logo" to="/invifriends">
+            <Link className="link-logo" to="#">
               <img src={arrowDown} alt="arrown down" />
             </Link>
           </div>
         </section>
-
         <footer>
           <div className="proyect-touken">
             <a className="myproyect" href="#">

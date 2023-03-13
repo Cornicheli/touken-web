@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import touken from "../img/touken.png";
-import "../style/home.css";
-import pieza1 from "../img/pieza1.png";
-import pieza2 from "../img/pieza2.png";
+import { Link, Navigate } from "react-router-dom";
+import touken from "../../img/touken.png";
+import "../../style/home.css";
+import pieza1 from "../../img/pieza1.png";
+import pieza2 from "../../img/pieza2.png";
 
-function Home() {
+function HomeB2C() {
   const [divOpacity, setDivOpacity] = React.useState(0);
   const [animation, setAnimation] = React.useState(false);
 
@@ -41,7 +41,7 @@ function Home() {
         </strong>
       </div>
 
-      <Link className="link" to="invitacion">
+      <Link className="link" to="/invitacionb2c">
         <Link className="link-submit">
           <span className="invitation-tile">A ver</span>
           <span className="icon-tile">👀</span>
@@ -67,4 +67,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomeB2C;
