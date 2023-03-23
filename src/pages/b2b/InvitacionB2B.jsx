@@ -7,6 +7,7 @@ import logoLink from "../../img/logoLink.png";
 import gif from "../../img/gif.gif";
 import axios from "axios";
 import API_URL from "../../api/api";
+import mailService from "../../services/mail";
 import Spinner from "../../components/Spinner/Spinner";
 
 export default function InvitacionB2B() {
@@ -21,11 +22,34 @@ export default function InvitacionB2B() {
       setMessage("el email es requerido");
       return;
     }
-
     setLoading(true);
 
     try {
-      const config = {
+      console.log(email)
+      const dataUser = await mailService(email, 'b2b')
+      if (dataUser.msg === 'Registrado correctamente' ) {
+        localStorage.setItem("session", "test"),
+        navigate("/toukenb2b")
+      } else {
+        setMessage(dataUser.msg);
+      }
+      /*axios.post(`${API_URL}/api/user?type=creator`, {
+        firstName: 'Fred',
+        lastName: 'Flintstone'
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: "Basic Y2h1bGk6MTIzNDU2",
+        }
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });*/
+
+      /*const config = {
         headers: {
           "Content-Type": "application/json",
           Authorization: "Basic Y2h1bGk6MTIzNDU2",
@@ -38,7 +62,10 @@ export default function InvitacionB2B() {
         localStorage.setItem("session", "test"),
         navigate("/toukenb2b")
       );
-      setMessage(data.msg);
+      setMessage(data.msg);*/
+
+
+
     } catch (error) {
       console.log(error.response);
       setMessage(error.response.data.msg);

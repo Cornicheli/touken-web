@@ -15,7 +15,8 @@
 }
 
 .icon-touken {
-  height: 3rem;
+    width: 200px;
+    height: 40.87px;
 }
 
 /* <----- header -----> */
@@ -26,9 +27,9 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  background-image: url("../img//bg-splash.png");
+  background-image: url("../img/bg-large.png");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 }
 
@@ -78,12 +79,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 7vh;
+  min-height: 15vh;
 }
 
-.proyect {
+.proyect {/*
   margin-left: 1rem;
-  margin-bottom: 36px;
+  margin-bottom: 36px;*/
 }
 
 .myproyect {

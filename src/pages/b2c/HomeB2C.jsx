@@ -20,7 +20,7 @@ function HomeB2C() {
   }, []);
 
   return (
-    <section className="ctn-main fade-in" style={{ opacity: divOpacity }}>
+    <section className="ctn-main-home fade-in" style={{ opacity: divOpacity }}>
       <figure className="ctn-logo">
         <img className="logo" src={touken} alt={touken} />
       </figure>
@@ -42,10 +42,10 @@ function HomeB2C() {
       </div>
 
       <Link className="link" to="/invitacionb2c">
-        <Link className="link-submit">
+        <div className="link-submit">
           <span className="invitation-tile">A ver</span>
           <span className="icon-tile">👀</span>
-        </Link>
+        </div>
       </Link>
       <img
         className="img-button"

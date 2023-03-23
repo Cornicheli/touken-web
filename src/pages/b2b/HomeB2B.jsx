@@ -41,11 +41,11 @@ function HomeB2B() {
         </strong>
       </div>
 
-      <Link className="link" to="/invitacionb2b">
-        <Link className="link-submit">
+      <Link  className="link" to="/invitacionb2b">
+        <div className="link-submit">
           <span className="invitation-tile">A ver</span>
           <span className="icon-tile">👀</span>
-        </Link>
+        </div>
       </Link>
       <img
         className="img-button"

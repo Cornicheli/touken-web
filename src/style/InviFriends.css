@@ -10,6 +10,11 @@
 }
 /* <----- TEXT -----> */
 
+.link{
+  
+  padding: 5px;
+}
+
 /* <----- BTN -----> */
 .ctnLink {
   display: flex;
@@ -18,7 +23,8 @@
   background-color: #7a33ff;
   width: 415px;
   height: 68px;
-  border-radius: 1rem;
+  border-radius: 50px;
+  border: solid 2px black;
 }
 .btn-link {
   display: flex;
@@ -45,10 +51,18 @@
   font-style: normal;
 }
 .icon-tile {
-  margin-right: 40px;
+  margin-right: 70px;
+  transition: all 0.3s ease-out;
+}
+.icon-tileFinal {
+  margin-right: 120px;
   transition: all 0.3s ease-out;
 }
 .link-inv:hover .icon-tile {
+  margin-right: 0px;
+  transition: all 0.3s ease-out;
+}
+.link-inv:hover .icon-tileFinal {
   margin-right: 0px;
   transition: all 0.3s ease-out;
 }

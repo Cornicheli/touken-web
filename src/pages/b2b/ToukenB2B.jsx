@@ -16,6 +16,23 @@ export default function ToukenB2B() {
       navigate("/");
     }
   }, []);
+
+  
+const [share, setShare]= React.useState(false);
+
+
+const Copy = async () =>{
+  try {
+    await navigator.clipboard.writeText('https://touken.io/');
+    console.log('Content copied to clipboard');
+    setShare(true)
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+}
+
+
+
   return (
     <main className="touken">
       <figure className="ctn-touken">
@@ -39,14 +56,23 @@ export default function ToukenB2B() {
             <br /> quieras) con este link:
           </h2>
         </div>
-        <div className="ctnLink">
+        {/*<div className="ctnLink">
           <div className="link-inv">
             <button className="btn-link">
               <span className="inv-tile">Touken</span>
               <img className="logo-btn" src={Vector} alt="Vector" />
             </button>
           </div>
+        </div>*/}
+        
+        <div onClick={()=> Copy()} className="link link-inv" to="/invitacionb2c" style={{width:'30%'}}>
+        <div className="link-submit">
+          {!share ? <><span className="invitation-tile">Touken</span>
+          <span className="icon-tileFinal" ><img className="logo-btn" src={Vector} alt="Vector" /></span></> : <>
+          <span >¡Link copiado!</span></> }
         </div>
+      </div>
+
       </section>
       <footer style={{ justifyContent: "center", alignItems: "center" }}>
         <div className="ctn-red-social">

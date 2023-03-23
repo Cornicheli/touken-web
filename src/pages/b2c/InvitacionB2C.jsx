@@ -8,6 +8,7 @@ import gif from "../../img/gif.gif";
 import logo from "../../img/logo.png";
 import axios from "axios";
 import API_URL from "../../api/api";
+import mailService from "../../services/mail";
 import Spinner from "../../components/Spinner/Spinner";
 
 export default function InvitacionB2C() {
@@ -22,25 +23,18 @@ export default function InvitacionB2C() {
       setMessage("el email es requerido");
       return;
     }
+    console.log("comenzo")
     setLoading(true);
     try {
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Basic Y2h1bGk6MTIzNDU2",
-        },
-      };
-      const { data } = await axios.post(
-        `${API_URL}/api/user?type=user`,
-        { email },
-        config,
+      const dataUser = await mailService(email, 'b2c')
+      if (dataUser.msg === 'Registrado correctamente' ) {
         localStorage.setItem("session", "test"),
         navigate("/toukenb2c")
-      );
-      setMessage(data.msg);
+      } else {
+        setMessage(dataUser.msg);
+      }
     } catch (error) {
-      console.log(error);
-      setMessage(error.response.data.msg);
+      setMessage(error.response.msg);
     }
     setEmail("");
     setLoading(false);
@@ -54,7 +48,14 @@ export default function InvitacionB2C() {
         <section className="ctnInv">
           <div className="ctn-info">
             <br />
-            <h1 className="title">
+            <p className="title">
+              <strong>Pronto</strong> lanzaremos la app.<br/><br/>
+              A las primeras 1000 personas le regalaremos su primer touken. <br/>
+              Durante un año repartiremos el 5% de nuestros<br/>
+              ingresos con los que lo tengan.<br/>
+            </p>
+
+            {/*<h1 className="title">
               <strong>Pronto</strong> lanzaremos la app.
               <br />
             </h1>
@@ -69,7 +70,7 @@ export default function InvitacionB2C() {
                 ingresos
               </strong>
               con los que lo tengan.
-            </p>
+            </p>*/}
             <form onSubmit={handleSubmit} className="send-mail">
               <input
                 className="text-input"
