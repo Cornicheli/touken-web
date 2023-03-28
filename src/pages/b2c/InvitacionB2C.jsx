@@ -23,13 +23,12 @@ export default function InvitacionB2C() {
       setMessage("el email es requerido");
       return;
     }
-    console.log("comenzo")
+    console.log("comenzo");
     setLoading(true);
     try {
-      const dataUser = await mailService(email, 'b2c')
-      if (dataUser.msg === 'Registrado correctamente' ) {
-        localStorage.setItem("session", "test"),
-        navigate("/toukenb2c")
+      const dataUser = await mailService(email, "b2c");
+      if (dataUser.msg === "Registrado correctamente") {
+        localStorage.setItem("session", "test"), navigate("/toukenb2c");
       } else {
         setMessage(dataUser.msg);
       }
@@ -49,10 +48,20 @@ export default function InvitacionB2C() {
           <div className="ctn-info">
             <br />
             <p className="title">
-              <strong>Pronto</strong> lanzaremos la app.<br/><br/>
-              A las primeras 1000 personas le regalaremos su primer touken. <br/>
-              Durante un año repartiremos el 5% de nuestros<br/>
-              ingresos con los que lo tengan.<br/>
+              <strong>Pronto</strong> lanzaremos la app.
+              <br />
+              <br />A las primeras
+              <strong> 1000 personas</strong> le regalaremos su
+              <strong> primer touken. </strong>
+              <br />
+              Durante un año repartiremos el{" "}
+              <strong>
+                5% de nuestros
+                <br />
+                ingresos
+              </strong>{" "}
+              con los que lo tengan.
+              <br />
             </p>
 
             {/*<h1 className="title">
@@ -106,7 +115,7 @@ export default function InvitacionB2C() {
           </div>
           <div className="none"></div>
           <div className="ctn-red-social">
-            <div>
+            <div className="ctnRedSocial">
               <a className="link-red-social" href="">
                 <img src={logoInst} alt="Instagram" />
               </a>
@@ -114,7 +123,9 @@ export default function InvitacionB2C() {
                 <img src={logoLink} alt="LinkeIn" />
               </a>
             </div>
-            <p className="text-ft">Próximamente</p>
+            <div>
+              <p className="text-ft">Próximamente</p>
+            </div>
           </div>
           <div className="none"></div>
           <div className="none"></div>
