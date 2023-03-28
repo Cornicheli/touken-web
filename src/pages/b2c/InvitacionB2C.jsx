@@ -74,7 +74,7 @@ export default function InvitacionB2C() {
             <form onSubmit={handleSubmit} className="send-mail">
               <input
                 className="text-input"
-                placeholder="Dejanos tu email"
+                placeholder="Déjanos tu email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

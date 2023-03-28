@@ -9,7 +9,7 @@ import axios from 'axios';
 //const API_PASSWORD = REACT_APP_API_PASSWORD
 
 const axiosInstance = axios.create({
-  baseURL: 'http://3.134.99.220:7000',
+  baseURL: 'https://touken.io/web/',
   headers: {
     'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',

@@ -1,2 +1,2 @@
-const API_URL = "http://3.21.102.219:7000";
+const API_URL = "https://touken.io/web/";
 export default API_URL;

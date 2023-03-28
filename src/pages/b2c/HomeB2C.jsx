@@ -25,7 +25,7 @@ function HomeB2C() {
         <img className="logo" src={touken} alt={touken} />
       </figure>
       <div>
-        <h1 className="title">Sé parte de proyectos creativos y</h1>
+        <h1 className="title">Co-crea con tus marcas favoritas y</h1>
         <strong>
           <h1>
             <span
@@ -35,7 +35,7 @@ function HomeB2C() {
                 transition: "1s",
               }}
             >
-              haz la diferencia.
+              sé parte del éxito
             </span>
           </h1>
         </strong>
