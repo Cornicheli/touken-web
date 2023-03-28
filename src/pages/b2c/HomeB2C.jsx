@@ -25,7 +25,7 @@ function HomeB2C() {
         <img className="logo" src={touken} alt={touken} />
       </figure>
       <div>
-        <h1 className="title">Co-crea con tus marcas favoritas y</h1>
+        <h1 className="titleB2C2">Co-crea con tus marcas favoritas y</h1>
         <strong>
           <h1>
             <span
