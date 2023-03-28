@@ -47,7 +47,7 @@ export default function InvitacionB2C() {
         <section className="ctnInv">
           <div className="ctn-info">
             <br />
-            <p className="title">
+            <p className="title" style={{ fontFamily: "Aileron" }}>
               <strong>Pronto</strong> lanzaremos la app.
               <br />
               <br />A las primeras
@@ -83,6 +83,7 @@ export default function InvitacionB2C() {
             <form onSubmit={handleSubmit} className="send-mail">
               <input
                 className="text-input"
+                style={{ fontFamily: "Aileron" }}
                 placeholder="Déjanos tu email"
                 type="email"
                 value={email}
@@ -94,7 +95,11 @@ export default function InvitacionB2C() {
                 </h2>
               ) : null}
               {!loading ? (
-                <button className="btn-submit" type="submit">
+                <button
+                  className="btn-submit"
+                  type="submit"
+                  style={{ fontFamily: "Aileron" }}
+                >
                   Quiero ser parte
                 </button>
               ) : (
@@ -124,7 +129,9 @@ export default function InvitacionB2C() {
               </a>
             </div>
             <div>
-              <p className="text-ft">Próximamente</p>
+              <p className="text-ft" style={{ fontFamily: "Aileron" }}>
+                Próximamente
+              </p>
             </div>
           </div>
           <div className="none"></div>

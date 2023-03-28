@@ -99,6 +99,7 @@ form {
   padding: 10px;
   margin-top: 59px;
   font-size: 25px;
+  font-family: "Aileron", sans-serif;
 }
 .text-input:focus-visible {
   outline: none;
@@ -192,10 +193,11 @@ footer {
   margin: 0px 11px 0px 11px;
 }
 .text-ft {
+  font-weight: bold;
   margin-left: 19px;
-  font-weight: 700;
   font-size: 20px;
   color: #000000;
+  font-family: "Aileron", sans-serif;
 }
 /* <----- footer ------> */
 @media screen and (max-width: 850px) {

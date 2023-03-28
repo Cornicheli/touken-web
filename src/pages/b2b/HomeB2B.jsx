@@ -25,7 +25,7 @@ function HomeB2B() {
         <img className="logo" src={touken} alt={touken} />
       </figure>
       <div>
-        <h1 className="title">Levanta fondos y crea con</h1>
+        <h1 className="titleB2B2">Levanta fondos y crea con</h1>
         <strong>
           <h1>
             <span
@@ -41,7 +41,7 @@ function HomeB2B() {
         </strong>
       </div>
 
-      <Link  className="link" to="/invitacionb2b">
+      <Link className="link" to="/invitacionb2b">
         <div className="link-submit">
           <span className="invitation-tile">A ver</span>
           <span className="icon-tile">👀</span>

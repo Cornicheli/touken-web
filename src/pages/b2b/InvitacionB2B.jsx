@@ -106,7 +106,11 @@ export default function InvitacionB2B() {
                 </h2>
               ) : null}
               {!loading ? (
-                <button className="btn-submit" type="submit">
+                <button
+                  className="btn-submit"
+                  type="submit"
+                  style={{ fontFamily: "Aileron" }}
+                >
                   Quiero ser parte
                 </button>
               ) : (

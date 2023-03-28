@@ -52,17 +52,22 @@ section {
   justify-content: space-evenly;
   min-height: 65vh;
 }
-.ml-100{
-  margin-left: 100px
+.ml-100 {
+  margin-left: 100px;
 }
-.mr-100{
-  margin-right: 100px
+.mr-100 {
+  margin-right: 100px;
 }
 /* < -------------------- main -------------------- > */
 
-.title {
+.titleB2B2 {
   font-style: normal;
   line-height: 45px;
+  font-size: 48px;
+  font-weight: 400;
+}
+.titleB2C2 {
+  font-style: normal;
   font-size: 48px;
   font-weight: 400;
 }
@@ -94,18 +99,18 @@ section {
 /* < -------------------- IMG - LOGO -------------------- > */
 
 .link {
-    border: solid 2px black;
-    border-radius: 50px;
-    min-width: 20%;
-    height: auto;
-    margin: 0.5rem;
-    background-color: #7a33ff;
-    text-decoration: none;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: flex-end;
+  border: solid 2px black;
+  border-radius: 50px;
+  min-width: 20%;
+  height: auto;
+  margin: 0.5rem;
+  background-color: #7a33ff;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-end;
 }
 
 .btn-link {
@@ -124,12 +129,12 @@ section {
 }
 
 .link-submit {
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    display: flex;
-    padding: 5px;
-    align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
 }
 .invitation-tile {
   visibility: hidden;
@@ -138,7 +143,7 @@ section {
   font-style: normal;
 }
 .icon-tile {
-  //margin-right: 90px;
+  margin-right: 90px;
   transition: all 0.3s ease-out;
   font-size: 40px;
   margin-top: -10px;
