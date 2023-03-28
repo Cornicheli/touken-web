@@ -55,9 +55,14 @@
 }
 .title {
   overflow: hidden;
-  font-size: 40px;
-  /*padding: 5px;*/
+  font-size: 31px;
   text-align: left;
+  line-height: 56px;
+  margin-right: 145px;
+  height: 328px;
+  width: 746px;
+  font-family: "Aileron";
+  font-weight: 400;
 }
 .gif {
   border-radius: 1rem;
@@ -70,8 +75,6 @@
   -webkit-box-shadow: 9px 8px 0px -1px rgba(113, 77, 182, 1);
   -moz-box-shadow: 9px 8px 0px -1px rgba(113, 77, 182, 1);
   box-shadow: 14px 14px 0px -1px rgba(113, 77, 182, 1);
-
-  /* margin-right: 170px; */
 }
 .img-gif {
   position: relative;
@@ -89,12 +92,13 @@ form {
   width: 100%;
 }
 .text-input {
-  height: 4rem;
-  border-radius: 100px;
-  font-size: 1.5rem;
-  border: green 2px solid;
-  width: 75%;
+  border-radius: 50px;
+  border: 2px solid #81cc00;
+  width: 526px;
+  height: 80px;
   padding: 10px;
+  margin-top: 59px;
+  font-size: 25px;
 }
 .text-input:focus-visible {
   outline: none;
@@ -108,20 +112,22 @@ form {
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
-  margin-top:60px;
 }
 .btn-submit {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 99px;
-  height: 3rem;
-  width: 40%;
-  font-size: 1.5rem;
+  height: 70px;
+  width: 415px;
+  font-size: 30px;
   color: white;
-  border-radius: 100px;
-  background-color: #7a33ff;
+  border-radius: 50px;
   text-decoration: none;
+  font-weight: 400;
+  background: #7a33ff;
+  border: 1.5px solid #000000;
+  box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.2);
 }
 .btn-submit:hover {
   background-color: #bd99ff;
@@ -147,31 +153,49 @@ footer {
 .ctn-red-social {
   display: flex;
   align-items: center;
-  border-radius: 100px;
-  width: 235px;
-  border: solid 2px grey;
-  justify-content: space-between;
-  padding: 5px;
-  /*margin-bottom: 36px;*/
+  width: 295px;
+  height: 60px;
+  border: solid 1.5px #000000;
+  overflow: hidden;
+  opacity: 0.5;
+  border-radius: 40px;
+}
+.ctnRedSocial {
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  height: 60px;
+  width: 100px;
+  padding: 5px, 0px, 5px, 0px;
+  border-top: solid 1.5px #000000;
+  border-right: solid 1.5px #000000;
+  border-bottom: solid 1.5px #000000;
+  border-left: 0px;
+  box-shadow: 6px 2px 8px 2px rgba(221, 255, 0, 0.5);
 }
 .proyect {
   display: flex;
   align-items: center;
-  /*margin-bottom: 36px;*/
 }
 .myproyect {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
+  color: #4e33ff;
 }
 .logo-ft {
-  /* margin-left: 3rem; */
+  padding: 10px;
+  width: 44px;
+  height: 44px;
 }
 .link-red-social {
-  margin: 0.5rem;
+  margin: 0px 11px 0px 11px;
 }
 .text-ft {
+  margin-left: 19px;
+  font-weight: 700;
   font-size: 20px;
+  color: #000000;
 }
 /* <----- footer ------> */
 @media screen and (max-width: 850px) {

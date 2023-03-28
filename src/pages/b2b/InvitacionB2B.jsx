@@ -25,11 +25,10 @@ export default function InvitacionB2B() {
     setLoading(true);
 
     try {
-      console.log(email)
-      const dataUser = await mailService(email, 'b2b')
-      if (dataUser.msg === 'Registrado correctamente' ) {
-        localStorage.setItem("session", "test"),
-        navigate("/toukenb2b")
+      console.log(email);
+      const dataUser = await mailService(email, "b2b");
+      if (dataUser.msg === "Registrado correctamente") {
+        localStorage.setItem("session", "test"), navigate("/toukenb2b");
       } else {
         setMessage(dataUser.msg);
       }
@@ -63,9 +62,6 @@ export default function InvitacionB2B() {
         navigate("/toukenb2b")
       );
       setMessage(data.msg);*/
-
-
-
     } catch (error) {
       console.log(error.response);
       setMessage(error.response.data.msg);
@@ -84,12 +80,9 @@ export default function InvitacionB2B() {
 
         <section className="ctnInv">
           <div className="ctn-info">
-            <br />
-            <h1 className="title">
+            <p className="title">
               <strong>Pronto</strong> lanzaremos la app.
               <br />
-            </h1>
-            <p className="ctn-text">
               Las primeras
               <strong> 1000 personas</strong>
               podran crear su primer proyecto <strong>gratis.</strong> <br />
