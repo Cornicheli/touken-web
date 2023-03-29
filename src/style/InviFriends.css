@@ -1,17 +1,19 @@
 /* <----- TEXT -----> */
 .textFriend {
-  text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 30px;
+  line-height: 36px;
+  text-align: center;
 }
 .titleTouken {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 48px;
   text-align: center;
-  font-size: 2rem;
 }
 /* <----- TEXT -----> */
 
-.link{
-  
+.link {
   padding: 5px;
 }
 

@@ -17,21 +17,17 @@ export default function ToukenB2B() {
     }
   }, []);
 
-  
-const [share, setShare]= React.useState(false);
+  const [share, setShare] = React.useState(false);
 
-
-const Copy = async () =>{
-  try {
-    await navigator.clipboard.writeText('https://touken.io/');
-    console.log('Content copied to clipboard');
-    setShare(true)
-  } catch (err) {
-    console.error('Failed to copy: ', err);
-  }
-}
-
-
+  const Copy = async () => {
+    try {
+      await navigator.clipboard.writeText("https://touken.io/");
+      console.log("Content copied to clipboard");
+      setShare(true);
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
+  };
 
   return (
     <main className="touken">
@@ -40,18 +36,25 @@ const Copy = async () =>{
       </figure>
       <section>
         <div>
-          <h1 className="titleTouken">
+          <h2 className="titleTouken" style={{ fontFamily: "Aileron" }}>
+            {" "}
             💃🏻 ¡Qué bueno que quieras sumarte! 🕺
+          </h2>
+          <h1 className="titleTouken" style={{ fontFamily: "Aileron" }}>
             <br />
-            ¡Antes de lanzar la app te contaremos cómo crear tu primer proyecto!
+            ¡Antes de lanzar la app te contaremos <strong>
+              {" "}
+              cómo crear{" "}
+            </strong>{" "}
+            tu primer <br /> <strong> proyecto! </strong>
           </h1>
         </div>
         <figure className="ctnGifTwo">
           <img className="gifTwo" src={gifTwo} alt="icon touken" />
         </figure>
         <div className="ctn-link-touken">
-          <h2 className="textFriend">
-            <strong>Invita</strong> a otros <strong>creadores</strong>
+          <h2 className="textFriend" style={{ fontFamily: "Aileron" }}>
+            <strong>Invita</strong> a otros <strong>creadores</strong>{" "}
             (cineastas, emprendedores, músicos, lo que
             <br /> quieras) con este link:
           </h2>
@@ -64,19 +67,32 @@ const Copy = async () =>{
             </button>
           </div>
         </div>*/}
-        
-        <div onClick={()=> Copy()} className="link link-inv" to="/invitacionb2c" style={{width:'30%'}}>
-        <div className="link-submit">
-          {!share ? <><span className="invitation-tile">Touken</span>
-          <span className="icon-tileFinal" ><img className="logo-btn" src={Vector} alt="Vector" /></span></> : <>
-          <span >¡Link copiado!</span></> }
-        </div>
-      </div>
 
+        <div
+          onClick={() => Copy()}
+          className="link link-inv"
+          to="/invitacionb2c"
+          style={{ width: "30%" }}
+        >
+          <div className="link-submit">
+            {!share ? (
+              <>
+                <span className="invitation-tile">Touken</span>
+                <span className="icon-tileFinal">
+                  <img className="logo-btn" src={Vector} alt="Vector" />
+                </span>
+              </>
+            ) : (
+              <>
+                <span>¡Link copiado!</span>
+              </>
+            )}
+          </div>
+        </div>
       </section>
       <footer style={{ justifyContent: "center", alignItems: "center" }}>
         <div className="ctn-red-social">
-          <div>
+          <div className="ctnRedSocial">
             <a className="link-red-social" href="">
               <img src={logoInst} alt="Instagram" />
             </a>
