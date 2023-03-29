@@ -7,11 +7,6 @@
   overflow-x: hidden;
   font-style: normal;
 }
-.subtitle {
-  position: absolute;
-  font-size: 40px;
-  line-height: 48px;
-}
 
 .ctn-main {
   display: flex;
@@ -70,6 +65,12 @@ section {
   font-style: normal;
   font-size: 48px;
   font-weight: 400;
+}
+
+.subtitle {
+  position: absolute;
+  font-size: 48px;
+  line-height: 48px;
 }
 /* < -------------------- main -------------------- > */
 

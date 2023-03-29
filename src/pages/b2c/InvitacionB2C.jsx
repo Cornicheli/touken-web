@@ -9,6 +9,7 @@ import logo from "../../img/logo.png";
 import axios from "axios";
 import API_URL from "../../api/api";
 import mailService from "../../services/mail";
+
 import Spinner from "../../components/Spinner/Spinner";
 
 export default function InvitacionB2C() {
