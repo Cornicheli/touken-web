@@ -54,9 +54,9 @@ export default function ToukenB2B() {
         </figure>
         <div className="ctn-link-touken">
           <h2 className="textFriend" style={{ fontFamily: "Aileron" }}>
-            <strong>Invita</strong> a otros <strong>creadores</strong>{" "}
-            (cineastas, emprendedores, músicos, lo que
-            <br /> quieras) con este link:
+            <strong>Invita</strong> a otros <strong> creadores </strong>{" "}
+            (cineastas, emprendedores, músicos, lo que <br /> quieras) con este
+            link:
           </h2>
         </div>
         {/*<div className="ctnLink">

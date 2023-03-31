@@ -35,7 +35,7 @@ function HomeB2C() {
                 transition: "1s",
               }}
             >
-              sé parte del éxito
+              gana recompensas
             </span>
           </h1>
         </strong>

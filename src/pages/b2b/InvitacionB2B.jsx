@@ -125,7 +125,7 @@ export default function InvitacionB2B() {
 
         <footer style={{ justifyContent: "center", alignItems: "center" }}>
           <div className="ctn-red-social">
-            <div>
+            <div className="ctnRedSocial">
               <a className="link-red-social" href="">
                 <img src={logoInst} alt="Instagram" />
               </a>

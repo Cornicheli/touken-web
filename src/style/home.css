@@ -60,16 +60,17 @@ section {
   line-height: 45px;
   font-size: 48px;
   font-weight: 400;
+  overflow-x: hidden;
 }
 .titleB2C2 {
   font-style: normal;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 400;
 }
 
 .subtitle {
   position: absolute;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 48px;
 }
 /* < -------------------- main -------------------- > */
@@ -102,8 +103,6 @@ section {
 .link {
   border: solid 2px black;
   border-radius: 50px;
-  min-width: 20%;
-  height: auto;
   margin: 0.5rem;
   background-color: #7a33ff;
   text-decoration: none;
@@ -112,6 +111,9 @@ section {
   align-items: center;
   justify-content: center;
   align-content: flex-end;
+
+  width: 415px;
+  height: 70px;
 }
 
 .btn-link {
