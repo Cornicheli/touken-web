@@ -46,7 +46,12 @@ export default function ToukenB2C() {
   return (
     <>
       <main className="touken">
-        <figure className="ctn-touken">
+        <figure
+          className="ctnTouken"
+          style={{
+            backdropFilter: "blur(10px)",
+          }}
+        >
           <img className="icon-touken" src={touken} alt="touken" />
         </figure>
         <section style={{ marginTop: "15vh" }}>
@@ -66,7 +71,7 @@ export default function ToukenB2C() {
           </figure>
           <div className="ctn-link-touken">
             <a className="link-text-touken" href="#">
-              ¡Esperá! Hay más 🤫
+              ¡Espera! Hay más 🤫
             </a>
             <Link className="link-logo" to="#">
               <img src={arrowDown} alt="arrown down" />
@@ -88,7 +93,8 @@ export default function ToukenB2C() {
         <section>
           <div>
             <h1 className="titleTouken">
-              Creemos que la mejor es <br /> <strong> crear, juntos.</strong>
+              Creemos que la mejor forma de <br />
+              <strong> crear es crear juntos </strong>
             </h1>
           </div>
           <figure className="ctnGifTwo">
@@ -96,9 +102,8 @@ export default function ToukenB2C() {
           </figure>
           <div className="ctn-link-touken">
             <h2 className="textFriend">
-              Invita a tus amig@s con <strong> este link </strong> y por cada
-              inscripto <br />
-              te <strong> regalamos otro touken </strong> igual, así ganás más
+              Invita a tus amig@s con <strong> este link </strong> <br /> Por
+              cada uno que se registre en la <strong> app ganas más </strong>
             </h2>
           </div>
           {/*<div className="ctnLink">
@@ -134,7 +139,7 @@ export default function ToukenB2C() {
         </section>
         <footer style={{ justifyContent: "center", alignItems: "center" }}>
           <div className="ctn-red-social">
-            <div>
+            <div className="ctnRedSocial">
               <a className="link-red-social" href="">
                 <img src={logoInst} alt="Instagram" />
               </a>

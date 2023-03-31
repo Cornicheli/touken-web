@@ -4,6 +4,8 @@
   font-size: 30px;
   line-height: 36px;
   text-align: center;
+  width: 911px;
+  height: 96px;
 }
 .titleTouken {
   font-weight: 300;
@@ -87,6 +89,7 @@
   height: 211px;
   box-shadow: 10px 5px 0px 0px rgba(189, 153, 255, 1);
   overflow: hiddentext-input;
+  margin: 50px 0px 50px 0px;
 }
 .gifTwo {
   border: solid 2px #befd50;
