@@ -21,7 +21,7 @@ function HomeB2B() {
 
   return (
     <section className="ctn-main fade-in" style={{ opacity: divOpacity }}>
-      <figure className="ctn-logo">
+      <figure className="ctnLogo">
         <img className="logo" src={touken} alt={touken} />
       </figure>
       <div>

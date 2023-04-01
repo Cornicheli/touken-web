@@ -99,15 +99,15 @@
 }
 /* <----- IMG -----> */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 775px) {
   .titleTouken {
     text-align: center;
     font-size: 1rem;
   }
   .textFriend {
     text-align: center;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 28px;
   }
   .ctnGifTwo {
     width: 210px;

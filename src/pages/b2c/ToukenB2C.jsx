@@ -55,7 +55,7 @@ export default function ToukenB2C() {
           <img className="icon-touken" src={touken} alt="touken" />
         </figure>
         <section style={{ marginTop: "15vh" }}>
-          <div className="ml-100 mr-100">
+          <div className="textTouken ml-100 mr-100">
             <h1 className="title-touken">
               💃🏻 ¡Qué bueno que quieras sumarte! 🕺
               <br />
@@ -74,22 +74,16 @@ export default function ToukenB2C() {
               ¡Espera! Hay más 🤫
             </a>
             <Link className="link-logo" to="#">
-              <img src={arrowDown} alt="arrown down" />
+              <img
+                className="imgToukenArrow"
+                src={arrowDown}
+                alt="arrown down"
+              />
             </Link>
           </div>
         </section>
-        <footer>
-          {/*<div className="proyect-touken">
-            <a className="myproyect" href="#">
-              <img className="logo-ft" src={logo} alt="logo alerta" />
-              Quiero crear un proyecto
-            </a>
-          </div>*/}
-        </footer>
+        <footer></footer>
 
-        {/* <figure className="ctn-touken">
-          <img className="icon-touken" src={touken} alt="touken" />
-        </figure> */}
         <section>
           <div>
             <h1 className="titleTouken">
@@ -106,20 +100,12 @@ export default function ToukenB2C() {
               cada uno que se registre en la <strong> app ganas más </strong>
             </h2>
           </div>
-          {/*<div className="ctnLink">
-          <div className="link-inv">
-            <button className="btn-link">
-              <span className="inv-tile">Touken</span>
-              <img className="logo-btn" src={Vector} alt="Vector" />
-            </button>
-          </div>
-        </div>*/}
 
           <div
             onClick={() => Copy()}
             className="link link-inv"
             to="/invitacionb2c"
-            style={{ width: "30%" }}
+            // style={{ width: "30%" }}
           >
             <div className="link-submit">
               {!share ? (
@@ -141,10 +127,10 @@ export default function ToukenB2C() {
           <div className="ctn-red-social">
             <div className="ctnRedSocial">
               <a className="link-red-social" href="">
-                <img src={logoInst} alt="Instagram" />
+                <img className="imgFooter" src={logoInst} alt="Instagram" />
               </a>
               <a className="link-red-social" href="">
-                <img src={logoLink} alt="LinkeIn" />
+                <img className="imgFooter" src={logoLink} alt="LinkeIn" />
               </a>
             </div>
             <p className="text-ft">Próximamente</p>

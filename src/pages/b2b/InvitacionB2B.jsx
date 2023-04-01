@@ -127,10 +127,10 @@ export default function InvitacionB2B() {
           <div className="ctn-red-social">
             <div className="ctnRedSocial">
               <a className="link-red-social" href="">
-                <img src={logoInst} alt="Instagram" />
+                <img className="imgFooter" src={logoInst} alt="Instagram" />
               </a>
               <a className="link-red-social" href="">
-                <img src={logoLink} alt="LinkeIn" />
+                <img className="imgFooter" src={logoLink} alt="LinkeIn" />
               </a>
             </div>
             <p className="text-ft">Próximamente</p>

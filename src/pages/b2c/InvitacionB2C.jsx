@@ -51,36 +51,12 @@ export default function InvitacionB2C() {
             <p className="title" style={{ fontFamily: "Aileron" }}>
               <strong>Pronto</strong> lanzaremos la app.
               <br />
-              <br />A las primeras
-              <strong> 1000 personas</strong> le regalaremos su
-              <strong> primer touken. </strong>
               <br />
-              Durante un año repartiremos el{" "}
-              <strong>
-                5% de nuestros
-                <br />
-                ingresos
-              </strong>{" "}
-              con los que lo tengan.
-              <br />
+              Estamos buscando a los <strong> primeros proyectos </strong>
+              <br /> que quieran llevar <strong> su comunidad </strong>
+              <br />a otro nivel.
             </p>
 
-            {/*<h1 className="title">
-              <strong>Pronto</strong> lanzaremos la app.
-              <br />
-            </h1>
-            <p className="ctn-text">
-              A las primeras
-              <strong> 1000 personas</strong> le regalaremos
-              <strong> su primer touken.</strong> <br />
-              Durante un año repartiremos
-              <strong> el 5% de</strong>
-              <strong>
-                nuestros <br />
-                ingresos
-              </strong>
-              con los que lo tengan.
-            </p>*/}
             <form onSubmit={handleSubmit} className="send-mail">
               <input
                 className="text-input"
@@ -91,7 +67,13 @@ export default function InvitacionB2C() {
                 onChange={(e) => setEmail(e.target.value)}
               />
               {message ? (
-                <h2 style={{ marginTop: 15, textDecoration: "underline" }}>
+                <h2
+                  style={{
+                    marginTop: 15,
+                    textDecoration: "underline",
+                    marginBottom: 15,
+                  }}
+                >
                   {message}
                 </h2>
               ) : null}
@@ -123,10 +105,10 @@ export default function InvitacionB2C() {
           <div className="ctn-red-social">
             <div className="ctnRedSocial">
               <a className="link-red-social" href="">
-                <img src={logoInst} alt="Instagram" />
+                <img className="imgFooter" src={logoInst} alt="Instagram" />
               </a>
               <a className="link-red-social" href="">
-                <img src={logoLink} alt="LinkeIn" />
+                <img className="imgFooter" src={logoLink} alt="LinkeIn" />
               </a>
             </div>
             <div>
