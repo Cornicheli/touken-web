@@ -82,6 +82,20 @@ section {
   justify-content: center;
 }
 
+.ctnLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 416px;
+  height: 85px;
+  margin-bottom: 51px;
+  margin-top: 376px;
+}
+
+.logoHome {
+  width: 100%;
+}
+
 .logo {
   width: 85%;
 }
@@ -111,7 +125,8 @@ section {
   align-items: center;
   justify-content: center;
   align-content: flex-end;
-
+  margin-top: 114px;
+  margin-bottom: 222px;
   width: 415px;
   height: 70px;
 }
@@ -175,6 +190,14 @@ section {
   border-radius: 1rem;
   background-color: greenyellow;
   margin: 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .image-container {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
 }
 
 @media only screen and (max-width: 360px) {

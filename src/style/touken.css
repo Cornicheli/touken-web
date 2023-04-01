@@ -42,7 +42,9 @@ section {
   align-items: center;
   min-height: 70vh;
 }
-
+.link {
+  width: 30%;
+}
 .title-touken {
   margin-bottom: 1rem;
   text-align: center;
@@ -86,12 +88,9 @@ footer {
   min-height: 16vh;
 }
 
-.proyect {
-  /*
-  margin-left: 1rem;
-  margin-bottom: 36px;*/
+.imgFooter {
+  width: 100%;
 }
-
 .myproyect {
   display: flex;
   align-items: center;
@@ -123,32 +122,76 @@ footer {
   }
 }
 
-@media only screen and (max-width: 350px) {
-  .ctn-touken {
-    height: 5vh;
-    margin-top: 36px;
+@media only screen and (max-width: 400px) {
+  .link {
+    margin: 20px 0px 35px 0px;
+    width: 328px;
+    height: 48px;
   }
-
-  .icon-touken {
-    height: 2rem;
+  .link-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
-  .title-touken {
-    font-size: 1rem;
+  .textTouken {
+    width: 328px;
+    height: 168px;
+    margin: 0px 16 0px 16px;
   }
+  .title-touken,
   .sub-title-touken {
-    font-size: 30px;
-  }
-  .link-text-touken {
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    width: 328px;
   }
   .ctn-logo-inv {
-    width: 11rem;
-    height: 11rem;
+    margin: 30px 0px 45px 0px;
+    width: 156px;
+    height: 175px;
   }
   .img-logo-inv {
     width: 100%;
-    height: 100%;
+  }
+  .link-text-touken {
+    margin: 0px 0px 13px 0px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .link-logo {
+    width: 50px;
+    height: 50px;
+  }
+  .imgToukenArrow {
+    width: 44px;
+    height: 40px;
+  }
+
+  .titleTouken {
+    width: 328px;
+    height: 104px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .ctnGifTwo {
+    margin: 25px 0px 40px 0px;
+  }
+
+  .textFriend {
+    width: 328px;
+    height: 72px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .link-submit {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
   }
 }

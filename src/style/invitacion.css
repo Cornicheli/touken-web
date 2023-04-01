@@ -161,6 +161,10 @@ footer {
   opacity: 0.5;
   border-radius: 40px;
 }
+
+.imgFooter {
+  width: 100%;
+}
 .ctnRedSocial {
   display: flex;
   align-items: center;
@@ -201,6 +205,9 @@ footer {
 }
 /* <----- footer ------> */
 @media screen and (max-width: 850px) {
+  .title {
+    width: 100%;
+  }
   section {
     flex-direction: column;
     align-items: center;
@@ -212,10 +219,6 @@ footer {
   .gif {
     display: none;
   }
-  .btn-submit {
-    width: 75%;
-    transition: 1s;
-  }
   .send-mail {
     padding: 0.5rem;
     align-items: center;
@@ -226,6 +229,9 @@ footer {
   }
 }
 @media only screen and (max-width: 768px) {
+  .text-input {
+    width: 500px;
+  }
   .invitacion {
     width: 100%;
   }
@@ -267,53 +273,72 @@ footer {
     align-items: center;
     flex-direction: column;
   }
-  .ctn-red-social {
-    width: 230px;
+  .ctn-touken {
+    height: 50px;
+    margin-top: 20px;
   }
-  .myproyect {
-    display: none;
+  .title {
+    margin: 0px 16px 0px 16px;
+    width: 328px;
+    height: 200px;
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  .text-ft {
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px;
   }
   .proyect {
-    display: none;
-  }
-  .btn-submit {
-    width: 75%;
-    margin-top: 1.5rem;
-    transition: 1s;
+    margin: 0px 16px 0px 16px;
+    width: 328px;
+    height: 44px;
+    padding: 0px 15px 0px 0px;
   }
   .logo-ft {
-    margin-left: 0rem;
+    margin: 0px 18px 0px 0px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-decoration-line: underline;
+    color: #4e33ff;
+  }
+
+  .text-input {
+    width: 328px;
+    height: 56px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 20px 16px 20px 16px;
+  }
+
+  .btn-submit {
+    width: 328px;
+    height: 48px;
+    background: #7a33ff;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0px;
+  }
+
+  .ctn-red-social {
+    margin-top: 20px;
   }
 }
+
 @media screen and (max-width: 450px) {
-  .text-input {
-    width: 300px;
-  }
-  .btn-submit {
-    width: 300px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-  }
   .Invitacion {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .title {
-    font-size: 20px;
-  }
   .ctn-text {
     font-size: 20px;
     margin-bottom: 0;
-  }
-  .logo-ft {
-    margin-left: 0rem;
-  }
-  .text-ft {
-    font-size: 1rem;
-  }
-  .ctn-red-social {
-    padding: 3px;
-    width: 200px;
   }
 }
 body::-webkit-scrollbar {

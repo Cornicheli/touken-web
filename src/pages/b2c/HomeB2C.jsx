@@ -20,12 +20,15 @@ function HomeB2C() {
   }, []);
 
   return (
-    <section className="ctn-main-home fade-in" style={{ opacity: divOpacity }}>
-      <figure className="ctn-logo">
-        <img className="logo" src={touken} alt={touken} />
+    <section
+      className="ctn-main-home fade-in"
+      style={{ opacity: divOpacity, justifyContent: "center" }}
+    >
+      <figure className="ctnLogo">
+        <img className="logoHome" src={touken} alt={touken} />
       </figure>
       <div>
-        <h1 className="titleB2C2">Co-crea con tus marcas favoritas y</h1>
+        <h1 className="titleB2C2">Co-crea y crece con tu </h1>
         <strong>
           <h1>
             <span
@@ -35,7 +38,7 @@ function HomeB2C() {
                 transition: "1s",
               }}
             >
-              gana recompensas
+              comunidad
             </span>
           </h1>
         </strong>
