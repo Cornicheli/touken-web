@@ -325,9 +325,9 @@ footer {
     margin-top: 20px;
   }
   .title {
-    margin: 0px 16px 0px 16px;
+    margin: 16px 16px 0px 16px;
     width: 328px;
-    height: 200px;
+    height: 224px;
     font-size: 20px;
     line-height: 35px;
   }

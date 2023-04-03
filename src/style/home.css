@@ -105,7 +105,7 @@
 }
 
 .logoHome {
-  width: 100%;
+  width: 416px;
 }
 
 /* .logo {
@@ -209,9 +209,41 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  .titleB2B2 {
+    font-size: 20px;
+  }
+  .ctnLogo {
+    margin-bottom: 45px;
+    width: 276px;
+    height: 56px;
+  }
+  .logoHome {
+    width: 276px;
+  }
+  .titleB2C2 {
+    width: 265px;
+    height: 58px;
+    font-size: 20px;
+  }
+  .link {
+    margin-top: 70px;
+    width: 328px;
+    height: 50px;
+  }
+  .link-submit {
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 360px) {
+  .ctnLogo {
+    margin-bottom: 45px;
+    width: 276px;
+    height: 56px;
+  }
+  .logoHome {
+    width: 276px;
+  }
   .subtitle {
     font-size: 20px;
   }

@@ -25,7 +25,7 @@ function HomeB2B() {
         <img className="logoHome" src={touken} alt={touken} />
       </figure>
       <div>
-        <h1 className="titleB2B2">Levanta fondos y crea con</h1>
+        <h1 className="titleB2B2">Co-crea y crece con tu</h1>
         <strong>
           <h1>
             <span
@@ -35,7 +35,7 @@ function HomeB2B() {
                 transition: "1s",
               }}
             >
-              tu comunidad
+              comunidad
             </span>
           </h1>
         </strong>
