@@ -79,22 +79,18 @@ export default function InvitacionB2B() {
 
         <section className="ctnInv">
           <div className="ctn-info">
-            <p className="title">
+            <p className="title" style={{ fontFamily: "Aileron" }}>
               <strong>Pronto</strong> lanzaremos la app.
               <br />
-              Las primeras
-              <strong> 1000 personas</strong>
-              podran crear su primer proyecto <strong>gratis.</strong> <br />
-              Encuentra tu
-              <strong> espacio ideal </strong>
-              para crear junto a tu <br />
-              <strong> comunidad </strong> proyectos
-              <strong> unicos </strong>
+              <br />
+              Estamos buscando a los <strong> primeros proyectos </strong>
+              <br /> que quieran llevar <strong> su comunidad </strong>
+              <br />a otro nivel.
             </p>
             <form onSubmit={handleSubmit} className="send-mail">
               <input
                 className="text-input"
-                placeholder="Dejanos tu email"
+                placeholder="Email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -105,7 +101,7 @@ export default function InvitacionB2B() {
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                   type="text"
-                  placeholder="Dejanos tu Red social o Pagina web"
+                  placeholder="RRSS / Página web"
                 />
               </label>
               <label className="ctn-select-input">
@@ -117,7 +113,7 @@ export default function InvitacionB2B() {
                   placeholder=" Porfavor seleccione su categoria"
                 >
                   <option className="opciones-input">
-                    Porfavor seleccione su categoria
+                    ¿De qué rubro/área eres?
                   </option>
                   {categories.length
                     ? categories.map((category, index) => (
