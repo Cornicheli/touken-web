@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "../../style/invitacion.css";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import touken from "../../img/touken.png";
 import logoInst from "../../img/logoInst.png";
 import logoLink from "../../img/logoLink.png";
-import gif from "../../img/gif.gif";
 import logo from "../../img/logo.png";
-import axios from "axios";
-import API_URL from "../../api/api";
 import mailService from "../../services/mail";
-
+import "../../style/invitacion.css";
+import axios from "axios";
 import Spinner from "../../components/Spinner/Spinner";
 
 export default function InvitacionB2C() {
@@ -17,6 +14,8 @@ export default function InvitacionB2C() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  console.log(searchParams.get("recommenderId"));
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,13 +26,16 @@ export default function InvitacionB2C() {
     console.log("comenzo");
     setLoading(true);
     try {
-      const dataUser = await mailService(email, "b2c");
+      const recommenderId = searchParams.get("recommenderId");
+      const dataUser = await mailService({ email }, "b2c", recommenderId);
+      console.log(dataUser);
       if (dataUser.msg === "Registrado correctamente") {
         localStorage.setItem("session", "test"), navigate("/toukenb2c");
       } else {
         setMessage(dataUser.msg);
       }
     } catch (error) {
+      console.log(error);
       setMessage(error.response.msg);
     }
     setEmail("");
@@ -66,6 +68,7 @@ export default function InvitacionB2C() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+
               {message ? (
                 <h2
                   style={{

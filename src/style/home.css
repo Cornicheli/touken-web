@@ -126,7 +126,7 @@ section {
   justify-content: center;
   align-content: flex-end;
   margin-top: 114px;
-  margin-bottom: 222px;
+  /* margin-bottom: 222px; */
   width: 415px;
   height: 70px;
 }

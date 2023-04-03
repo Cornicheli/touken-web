@@ -1,17 +1,28 @@
 import axiosInstance from "./axiosInstance";
+import axios from "axios";
 //import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const mailService = async (mail, type) => {
+const config = {
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Basic Y2h1bGk6MTIzNDU2`,
+  },
+};
+
+const mailService = async (datos, type, idRecomendador = null) => {
   try {
-    let datos;
-    datos = {
-      email: mail
-    };
-    let typeUrl = type === 'b2c' ? '/api/user?type=user':'/api/user?type=creator'
-    const respLogin = await axiosInstance.post(typeUrl, datos);
+    let backUrl = "http://localhost:5000";
+    let typeUrl = `
+    ${backUrl}${
+      type === "b2c"
+        ? `/api/user${idRecomendador ? `?recommenderId=${idRecomendador}` : ""}`
+        : "/api/creator"
+    }`;
+    console.log(typeUrl);
+    const respLogin = await axios.post(typeUrl, datos, config);
     return respLogin.data;
   } catch (error) {
-   // console.log('error FF')
+    // console.log('error FF')
     throw new Error(error);
   }
   /*try {

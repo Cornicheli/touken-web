@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../../style/invitacion.css";
 import touken from "../../img/touken.png";
@@ -6,62 +6,61 @@ import logoInst from "../../img/logoInst.png";
 import logoLink from "../../img/logoLink.png";
 import gif from "../../img/gif.gif";
 import axios from "axios";
-import API_URL from "../../api/api";
 import mailService from "../../services/mail";
+import Category from "../../components/Category";
 import Spinner from "../../components/Spinner/Spinner";
 
 export default function InvitacionB2B() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [categories, setCategories] = useState([]);
+  const [url, setUrl] = useState("");
+  const [category, setCategory] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const getCategories = async () => {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Basic Y2h1bGk6MTIzNDU2
+            `,
+        },
+      };
+      try {
+        const { data } = await axios.get(
+          "http://localhost:5000/api/creator/categories",
+          config
+        );
+        setCategories(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getCategories();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!email) {
-      setMessage("el email es requerido");
+    if (!email || !category || !url) {
+      setMessage("Los campos son requeridos");
       return;
     }
     setLoading(true);
-
     try {
-      console.log(email);
-      const dataUser = await mailService(email, "b2b");
+      console.log(email, category, url);
+      const dataForm = {
+        email,
+        socialNetworks_website: url,
+        category,
+      };
+      const dataUser = await mailService(dataForm, "b2b");
       if (dataUser.msg === "Registrado correctamente") {
         localStorage.setItem("session", "test"), navigate("/toukenb2b");
       } else {
         setMessage(dataUser.msg);
       }
-      /*axios.post(`${API_URL}/api/user?type=creator`, {
-        firstName: 'Fred',
-        lastName: 'Flintstone'
-      }, {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: "Basic Y2h1bGk6MTIzNDU2",
-        }
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });*/
-
-      /*const config = {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Basic Y2h1bGk6MTIzNDU2",
-        },
-      };
-      const { data } = await axios.post(
-        `${API_URL}/api/user?type=creator`,
-        { email },
-        config,
-        localStorage.setItem("session", "test"),
-        navigate("/toukenb2b")
-      );
-      setMessage(data.msg);*/
     } catch (error) {
       console.log(error.response);
       setMessage(error.response.data.msg);
@@ -75,7 +74,7 @@ export default function InvitacionB2B() {
     <>
       <main className="Invitacion">
         <figure className="ctn-touken">
-          <img className="icon-touken" src={touken} alt="touken" />
+          <img className="iconTouken" src={touken} alt="touken" />
         </figure>
 
         <section className="ctnInv">
@@ -100,6 +99,31 @@ export default function InvitacionB2B() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              <label>
+                <input
+                  className="text-social-input"
+                  value={url}
+                  onChange={(e) => setUrl(e.target.value)}
+                  type="text"
+                  placeholder="Dejanos tu Red social o Pagina web"
+                />
+              </label>
+              <label className="ctn-select-input">
+                <select
+                  className="select-input"
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                  name="numbers"
+                >
+                  <option>Porfavor seleccione su categoria</option>
+                  {categories.length
+                    ? categories.map((category, index) => (
+                        <Category key={index} category={category} />
+                      ))
+                    : null}
+                </select>
+              </label>
+
               {message ? (
                 <h2 style={{ marginTop: 15, textDecoration: "underline" }}>
                   {message}
