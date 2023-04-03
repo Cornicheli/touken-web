@@ -11,7 +11,7 @@
 .ctn-main {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   align-items: center;
   min-height: 100vh;
   background-image: url("../img/bg-carga-inicio.png");
@@ -20,10 +20,10 @@
   background-repeat: no-repeat;
 }
 
-.ctn-main-home {
+.ctnMainHome {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-image: url("../img/bg-carga-inicio.png");
@@ -42,11 +42,11 @@
   right: 0;
   margin-top: 48px;
 }
-section {
+/* section {
   display: flex;
   justify-content: space-evenly;
   min-height: 65vh;
-}
+} */
 .ml-100 {
   margin-left: 100px;
 }
@@ -58,14 +58,16 @@ section {
 .titleB2B2 {
   font-style: normal;
   line-height: 45px;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 400;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .titleB2C2 {
   font-style: normal;
+  line-height: 45px;
   font-size: 40px;
   font-weight: 400;
+  overflow: hidden;
 }
 
 .subtitle {
@@ -89,16 +91,26 @@ section {
   width: 416px;
   height: 85px;
   margin-bottom: 51px;
-  margin-top: 376px;
+  /* margin-top: 376px; */
+}
+
+.ctnLogo1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 416px;
+  height: 85px;
+  /* margin-bottom: 51px; */
+  /* margin-top: 376px; */
 }
 
 .logoHome {
   width: 100%;
 }
 
-.logo {
+/* .logo {
   width: 85%;
-}
+} */
 
 .logo-touken {
   border: solid 3px black;
@@ -126,7 +138,6 @@ section {
   justify-content: center;
   align-content: flex-end;
   margin-top: 114px;
-  /* margin-bottom: 222px; */
   width: 415px;
   height: 70px;
 }

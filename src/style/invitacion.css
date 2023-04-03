@@ -154,7 +154,7 @@ form {
 .select-input {
   border-radius: 50px;
   border: 2px solid #81cc00;
-  width: 470px;
+  width: 420px;
   height: 60px;
   padding: 10px;
   margin-top: 59px;
@@ -173,6 +173,10 @@ form {
   font-size: 20px;
 }
 
+.opciones-input {
+  width: 50px;
+  font-size: 18px;
+}
 /* <----- form -----> */
 /* <----- footer ------> */
 footer {
@@ -268,7 +272,11 @@ footer {
   }
 }
 @media only screen and (max-width: 768px) {
-  .text-input {
+  .select-input,
+  .text-social-input {
+    width: 500px;
+  }
+  .text-social-input {
     width: 500px;
   }
   .invitacion {
@@ -344,7 +352,9 @@ footer {
     color: #4e33ff;
   }
 
-  .text-input {
+  .text-input,
+  .text-social-input,
+  .select-input {
     width: 328px;
     height: 56px;
     font-weight: 400;

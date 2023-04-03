@@ -20,10 +20,7 @@ function HomeB2C() {
   }, []);
 
   return (
-    <section
-      className="ctn-main-home fade-in"
-      style={{ opacity: divOpacity, justifyContent: "center" }}
-    >
+    <div className="ctnMainHome fade-in" style={{ opacity: divOpacity }}>
       <figure className="ctnLogo">
         <img className="logoHome" src={touken} alt={touken} />
       </figure>
@@ -66,7 +63,7 @@ function HomeB2C() {
           transition: "1s",
         }}
       />
-    </section>
+    </div>
   );
 }
 
