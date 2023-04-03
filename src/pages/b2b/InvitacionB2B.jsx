@@ -114,8 +114,11 @@ export default function InvitacionB2B() {
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
                   name="numbers"
+                  placeholder=" Porfavor seleccione su categoria"
                 >
-                  <option>Porfavor seleccione su categoria</option>
+                  <option className="opciones-input">
+                    Porfavor seleccione su categoria
+                  </option>
                   {categories.length
                     ? categories.map((category, index) => (
                         <Category key={index} category={category} />

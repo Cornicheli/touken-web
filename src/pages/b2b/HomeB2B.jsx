@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, Navigate } from "react-router-dom";
 import touken from "../../img/touken.png";
-import "../../style/home.css";
 import pieza1 from "../../img/pieza1.png";
 import pieza2 from "../../img/pieza2.png";
+import "../../style/home.css";
 
 function HomeB2B() {
   const [divOpacity, setDivOpacity] = React.useState(0);
@@ -20,9 +20,9 @@ function HomeB2B() {
   }, []);
 
   return (
-    <section className="ctn-main fade-in" style={{ opacity: divOpacity }}>
+    <div className="ctnMainHome fade-in" style={{ opacity: divOpacity }}>
       <figure className="ctnLogo">
-        <img className="logo" src={touken} alt={touken} />
+        <img className="logoHome" src={touken} alt={touken} />
       </figure>
       <div>
         <h1 className="titleB2B2">Levanta fondos y crea con</h1>
@@ -63,7 +63,7 @@ function HomeB2B() {
           transition: "1s",
         }}
       />
-    </section>
+    </div>
   );
 }
 
