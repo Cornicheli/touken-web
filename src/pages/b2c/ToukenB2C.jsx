@@ -29,18 +29,6 @@ export default function ToukenB2C() {
     } catch (err) {
       console.error("Failed to copy: ", err);
     }
-    /*if (navigator.share) {
-    navigator.share({
-      title: 'Touken',
-      url: 'https://touken.io/'
-    }).then(() => {
-      setShare(true)
-      console.log('Thanks for sharing!');
-    })
-    .catch(console.error);
-  } else {
-    // fallback
-  }*/
   };
 
   return (
