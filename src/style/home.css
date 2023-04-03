@@ -87,6 +87,7 @@ button:hover {
 .link-submit {
   text-decoration: none;
   color: black;
+  overflow: hidden;
 }
 
 .ctn-link {
