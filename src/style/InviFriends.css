@@ -4,8 +4,7 @@
   font-size: 30px;
   line-height: 36px;
   text-align: center;
-  width: 911px;
-  height: 96px;
+  height: 110px;
 }
 .titleTouken {
   font-weight: 300;
@@ -59,7 +58,7 @@
   transition: all 0.3s ease-out;
 }
 .icon-tileFinal {
-  margin-right: 120px;
+  margin-right: 90px;
   transition: all 0.3s ease-out;
 }
 .link-inv:hover .icon-tile {
@@ -83,6 +82,8 @@
 
 /* <----- IMG -----> */
 .ctnGifTwo {
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   border-radius: 1rem;
   width: 416px;
@@ -99,15 +100,29 @@
 }
 /* <----- IMG -----> */
 
+@media only screen and (max-width: 1920px) {
+  .icon-tileFinal {
+    margin-right: 115px;
+    transition: all 0.3s ease-out;
+  }
+}
+
 @media only screen and (max-width: 775px) {
+  .Invitacion {
+    background-image: url("../img/bg-invitacion-responsive.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   .titleTouken {
     text-align: center;
-    font-size: 1rem;
+    font-size: 20px;
   }
   .textFriend {
     text-align: center;
     font-size: 20px;
     line-height: 28px;
+    padding: 0px 15px 0px 15px;
   }
   .ctnGifTwo {
     width: 210px;
@@ -124,8 +139,14 @@
     margin-bottom: 1rem;
   }
   .link-red-social {
-    height: 21px;
+    /* height: 21px; */
     width: 21px;
     border-radius: 0px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .icon-tileFinal {
+    margin-right: 80px;
+    transition: all 0.3s ease-out;
   }
 }

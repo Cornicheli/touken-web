@@ -42,7 +42,7 @@ export default function ToukenB2C() {
         >
           <img className="icon-touken" src={touken} alt="touken" />
         </figure>
-        <section style={{ marginTop: "15vh" }}>
+        <section className="touken-three">
           <div className="textTouken ml-100 mr-100">
             <h1 className="title-touken">
               💃🏻 ¡Qué bueno que quieras sumarte! 🕺
@@ -50,14 +50,14 @@ export default function ToukenB2C() {
             </h1>
             <h2 className="sub-title-touken">
               ¡Cuando lancemos la app te contaremos cómo{" "}
-              <strong>canjear</strong> tu <strong>touken</strong> de
+              <strong>canjear</strong> tu <strong>touken</strong> <br /> de
               <strong> regalo!</strong>
             </h2>
           </div>
-          <figure className="ctn-logo-inv">
+          <figure className="ctn-logo-invb2c">
             <img className="img-logo-inv" src={iconTouken} alt="icon touken" />
           </figure>
-          <div className="ctn-link-touken">
+          <div className="ctn-link-toukenb2c">
             <a className="link-text-touken" href="#">
               ¡Espera! Hay más 🤫
             </a>
@@ -72,7 +72,7 @@ export default function ToukenB2C() {
         </section>
         <footer></footer>
 
-        <section>
+        <section className="toukenTwo">
           <div>
             <h1 className="titleTouken">
               Creemos que la mejor forma de <br />

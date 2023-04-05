@@ -3,6 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import touken from "../../img/touken.png";
 import pieza1 from "../../img/pieza1.png";
 import pieza2 from "../../img/pieza2.png";
+// import gif from "../../img/gif.gif";
 import "../../style/home.css";
 
 function HomeB2B() {
@@ -25,7 +26,7 @@ function HomeB2B() {
         <img className="logoHome" src={touken} alt={touken} />
       </figure>
       <div>
-        <h1 className="titleB2B2">Co-crea y crece con tu</h1>
+        <h1 className="titleB2B">Co-crea y crece con tu</h1>
         <strong>
           <h1>
             <span

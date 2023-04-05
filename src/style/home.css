@@ -55,13 +55,14 @@
 }
 /* < -------------------- main -------------------- > */
 
-.titleB2B2 {
+.titleB2B {
   font-style: normal;
   line-height: 45px;
   font-size: 40px;
   font-weight: 400;
   overflow: hidden;
 }
+
 .titleB2C2 {
   font-style: normal;
   line-height: 45px;
@@ -102,10 +103,14 @@
   height: 85px;
   /* margin-bottom: 51px; */
   /* margin-top: 376px; */
+  overflow: hidden;
 }
 
 .logoHome {
+  position: absolute;
   width: 416px;
+  overflow: hidden;
+  z-index: 9999;
 }
 
 /* .logo {
@@ -137,9 +142,11 @@
   align-items: center;
   justify-content: center;
   align-content: flex-end;
-  margin-top: 114px;
   width: 415px;
   height: 70px;
+  z-index: 9999;
+  overflow: hidden;
+  margin-top: 100px;
 }
 
 .btn-link {
@@ -162,20 +169,28 @@
   color: white;
   font-size: 30px;
   display: flex;
-  padding: 5px;
+  justify-content: center;
   align-items: center;
+  /* padding: 5px; */
+  height: 70px;
 }
 .invitation-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease-out;
   font-style: normal;
 }
 .icon-tile {
-  margin-right: 90px;
+  /* margin-right: 90px; */
   transition: all 0.3s ease-out;
   font-size: 40px;
   margin-top: -10px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
 }
 .link:hover .icon-tile {
   margin-right: 0px;
@@ -209,6 +224,9 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  .logoHome {
+    width: 400px;
+  }
   .titleB2B2 {
     font-size: 20px;
   }
@@ -217,12 +235,10 @@
     width: 276px;
     height: 56px;
   }
-  .logoHome {
-    width: 276px;
-  }
+
   .titleB2C2 {
     width: 265px;
-    height: 58px;
+    /* height: 58px; */
     font-size: 20px;
   }
   .link {
@@ -233,6 +249,19 @@
   .link-submit {
     height: auto;
   }
+
+  .subtitle {
+    font-size: 20px;
+  }
+  .ctnMainHome {
+    background-image: url("../img/bg-carga-inicio-responsive.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .img-button,
+  .img-top {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 360px) {
@@ -242,11 +271,11 @@
     height: 56px;
   }
   .logoHome {
-    width: 276px;
+    width: 400px;
+    /* margin-left: 40px; */
+    margin-right: 40px;
   }
-  .subtitle {
-    font-size: 20px;
-  }
+
   .link {
     position: relative;
     z-index: 9999;

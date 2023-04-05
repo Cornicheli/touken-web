@@ -50,18 +50,27 @@ export default function InvitacionB2C() {
         <section className="ctnInv">
           <div className="ctn-info">
             <br />
-            <p className="title" style={{ fontFamily: "Aileron" }}>
+            <p className="titleB2C" style={{ fontFamily: "Aileron" }}>
               <strong>Pronto</strong> lanzaremos la app.
               <br />
+              <br />A las primeras <strong> 1000 personas </strong>
+              le regalaremos su{" "}
+              <strong>
+                {" "}
+                <br /> primer touken.{" "}
+              </strong>
               <br />
-              Estamos buscando a los <strong> primeros proyectos </strong>
-              <br /> que quieran llevar <strong> su comunidad </strong>
-              <br />a otro nivel.
+              Durante un año repetiremos el{" "}
+              <strong>
+                {" "}
+                5% de nuestros <br /> ingresos
+              </strong>{" "}
+              con los que tengan.
             </p>
 
             <form onSubmit={handleSubmit} className="send-mail">
               <input
-                className="text-input"
+                className="textInput"
                 style={{ fontFamily: "Aileron" }}
                 placeholder="Déjanos tu email"
                 type="email"
