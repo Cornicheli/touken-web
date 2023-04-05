@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Navigate } from "react-router-dom";
 import touken from "../../img/touken.png";
 import "../../style/home.css";
+// import gif from "../../img/gif.gif";
 import pieza1 from "../../img/pieza1.png";
 import pieza2 from "../../img/pieza2.png";
 

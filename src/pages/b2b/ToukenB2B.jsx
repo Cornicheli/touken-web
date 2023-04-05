@@ -32,7 +32,7 @@ export default function ToukenB2B() {
   return (
     <main className="touken">
       <figure className="ctn-touken">
-        <img className="icon-touken" src={touken} alt="touken" />
+        <img className="iconTouken" src={touken} alt="touken" />
       </figure>
       <section>
         <div>
@@ -59,20 +59,12 @@ export default function ToukenB2B() {
             link:
           </h2>
         </div>
-        {/*<div className="ctnLink">
-          <div className="link-inv">
-            <button className="btn-link">
-              <span className="inv-tile">Touken</span>
-              <img className="logo-btn" src={Vector} alt="Vector" />
-            </button>
-          </div>
-        </div>*/}
 
         <div
           onClick={() => Copy()}
           className="link link-inv"
           to="/invitacionb2c"
-          style={{ width: "30%" }}
+          style={{ width: "305px" }}
         >
           <div className="link-submit">
             {!share ? (

@@ -79,7 +79,7 @@ export default function InvitacionB2B() {
 
         <section className="ctnInv">
           <div className="ctn-info">
-            <p className="title" style={{ fontFamily: "Aileron" }}>
+            <p className="titleB2B" style={{ fontFamily: "Aileron" }}>
               <strong>Pronto</strong> lanzaremos la app.
               <br />
               <br />
@@ -104,15 +104,19 @@ export default function InvitacionB2B() {
                   placeholder="RRSS / Página web"
                 />
               </label>
+
               <label className="ctn-select-input">
                 <select
                   className="select-input"
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  name="numbers"
-                  placeholder=" Porfavor seleccione su categoria"
                 >
-                  <option className="opciones-input">
+                  <option
+                    className="opciones-input"
+                    selected
+                    hidden
+                    placeholder="¿De qué rubro/área eres?"
+                  >
                     ¿De qué rubro/área eres?
                   </option>
                   {categories.length

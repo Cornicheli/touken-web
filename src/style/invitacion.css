@@ -8,11 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10vh;
-  margin-top: 36px;
+  height: 112px;
+  margin-top: 10px;
 }
 .iconTouken {
-  height: 3rem;
+  width: 250px;
+  height: 85px;
 }
 /* <----- header -----> */
 /* <----- main -----> */
@@ -53,7 +54,7 @@
   padding: 20px;
   justify-content: center;
 }
-.title {
+.titleB2C {
   overflow: hidden;
   font-size: 31px;
   text-align: left;
@@ -63,6 +64,23 @@
   width: 746px;
   font-family: "Aileron";
   font-weight: 400;
+}
+
+.titleB2B {
+  overflow: hidden;
+  font-size: 31px;
+  text-align: left;
+  line-height: 56px;
+  margin-right: 145px;
+  height: 328px;
+  width: 746px;
+  font-family: "Aileron";
+  font-weight: 400;
+}
+.toukenTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .gif {
   border-radius: 1rem;
@@ -100,14 +118,35 @@ form {
   margin-top: 59px;
   font-size: 25px;
   font-family: "Aileron", sans-serif;
+  opacity: 0.8;
 }
 .text-input:focus-visible {
   outline: none;
-  border: solid green 2px;
+  border: 2px solid #81cc00;
 }
 ::placeholder {
   padding: 10px;
 }
+
+.textInput {
+  border-radius: 50px;
+  border: 2px solid #81cc00;
+  width: 526px;
+  height: 80px;
+  padding: 10px;
+  margin-top: 59px;
+  font-size: 25px;
+  font-family: "Aileron", sans-serif;
+  opacity: 0.8;
+}
+.textInput:focus-visible {
+  outline: none;
+  border: 2px solid #81cc00;
+}
+::placeholder {
+  padding: 10px;
+}
+
 .send-mail {
   display: flex;
   flex-direction: column;
@@ -139,32 +178,39 @@ form {
   border-radius: 70px;
   border: 2px solid #81cc00;
   width: 520px;
-  height: 70px;
+  height: 80px;
   padding: 10px;
   margin-top: 59px;
   font-size: 25px;
   font-family: "Aileron", sans-serif;
+  opacity: 0.8;
 }
 
 .text-social-input:focus-visible {
   outline: none;
-  border: solid green 2px;
+  border: 2px solid #81cc00;
 }
 
 .select-input {
   border-radius: 50px;
   border: 2px solid #81cc00;
   width: 420px;
-  height: 60px;
+  height: 80px;
   padding: 10px;
   margin-top: 59px;
   font-size: 25px;
   font-family: "Aileron", sans-serif;
+  opacity: 0.6;
+}
+
+option {
+  color: black;
+  opacity: 1;
 }
 
 .select-input:focus-visible {
   outline: none;
-  border: solid green 2px;
+  border: 2px solid #81cc00;
 }
 
 .value-input {
@@ -251,7 +297,8 @@ footer {
   .title {
     width: 100%;
   }
-  section {
+  .toukenTwo {
+    display: flex;
     flex-direction: column;
     align-items: center;
     transition: 1s;
@@ -263,7 +310,7 @@ footer {
     display: none;
   }
   .send-mail {
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     align-items: center;
   }
   .ctn-text {
@@ -313,6 +360,13 @@ footer {
   .ctn-text {
     margin-bottom: 40px;
   }
+
+  .Invitacion {
+    background-image: url("../img/bg-invitacion-responsive.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 @media screen and (max-width: 650px) {
   footer {
@@ -321,24 +375,30 @@ footer {
     flex-direction: column;
   }
   .ctn-touken {
-    height: 50px;
-    margin-top: 20px;
+    height: 75px;
+    margin-top: 0px;
   }
-  .title {
+  .titleB2B {
     margin: 16px 16px 0px 16px;
-    width: 328px;
-    height: 224px;
+    width: 310px;
+    height: 185px;
     font-size: 20px;
-    line-height: 35px;
+    line-height: 28px;
   }
-
+  .titleB2C {
+    margin: 0px 10px 0px 10px;
+    width: 310px;
+    height: 195px;
+    font-size: 20px;
+    line-height: 28px;
+  }
   .text-ft {
     text-align: center;
     font-size: 13px;
     line-height: 20px;
   }
   .proyect {
-    margin: 0px 16px 0px 16px;
+    margin: 10px 16px 0px 16px;
     width: 328px;
     height: 44px;
     padding: 0px 15px 0px 0px;
@@ -355,16 +415,24 @@ footer {
   .text-input,
   .text-social-input,
   .select-input {
-    width: 328px;
+    width: 300px;
     height: 56px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    margin: 20px 16px 20px 16px;
+    margin: 20px 0px 20px 0px;
   }
-
+  .textInput {
+    width: 300px;
+    height: 56px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 20px 0px 20px 0px;
+  }
   .btn-submit {
-    width: 328px;
+    width: 300px;
+
     height: 48px;
     background: #7a33ff;
     border: 1.5px solid #000000;
