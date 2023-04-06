@@ -102,6 +102,12 @@
   height: auto;
   border: solid 2px #ffff54;
 }
+
+.textPositionB2B {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-decoration: "underline";
+}
 /* <----- form -----> */
 form {
   display: flex;
