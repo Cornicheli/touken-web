@@ -61,9 +61,6 @@
   font-size: 40px;
   font-weight: 400;
   overflow: hidden;
-  /* width: 400px; */
-
-  width: 474px;
   height: 58px;
 }
 
@@ -79,6 +76,9 @@
   position: absolute;
   font-size: 40px;
   line-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* < -------------------- main -------------------- > */
 
@@ -270,6 +270,9 @@
 }
 
 @media only screen and (max-width: 360px) {
+  .subtitle {
+    width: 215px;
+  }
   .titleB2BHome {
     width: 265px;
     height: 58px;

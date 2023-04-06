@@ -42,7 +42,7 @@ function HomeB2B() {
           <span
             className="subtitle"
             style={{
-              marginLeft: animation ? "-200px" : "-100%",
+              marginLeft: animation ? "-172px" : "-100%",
               transition: "1s",
             }}
           >
