@@ -80,6 +80,15 @@
   justify-content: center;
   align-items: center;
 }
+.subtitleB2C {
+  position: absolute;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* < -------------------- main -------------------- > */
 
 /* < -------------------- IMG - LOGO -------------------- > */
@@ -243,7 +252,7 @@
 
   .titleB2C2 {
     width: 265px;
-    height: 58px;
+    /* height: 58px; */
     font-size: 20px;
   }
   .link {
@@ -256,6 +265,10 @@
   }
 
   .subtitle {
+    font-size: 20px;
+  }
+
+  .subtitleB2C {
     font-size: 20px;
   }
   .ctnMainHome {
@@ -273,9 +286,12 @@
   .subtitle {
     width: 215px;
   }
+  .subtitleB2C {
+    width: 113px;
+  }
   .titleB2BHome {
     width: 265px;
-    height: 58px;
+    height: 45px;
   }
   .ctnMainHome {
     background-image: url("../img/bg-carga-inicio-responsive.png");

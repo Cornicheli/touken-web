@@ -149,4 +149,8 @@
     margin-right: 80px;
     transition: all 0.3s ease-out;
   }
+  .icon-tile {
+    margin-right: 30px;
+    transition: all 0.3s ease-out;
+  }
 }
