@@ -49,7 +49,6 @@ export default function InvitacionB2C() {
         </figure>
         <section className="ctnInv">
           <div className="ctn-info">
-            <br />
             <p className="titleB2C" style={{ fontFamily: "Aileron" }}>
               <strong>Pronto</strong> lanzaremos la app.
               <br />
