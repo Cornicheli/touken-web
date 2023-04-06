@@ -127,11 +127,6 @@ export default function InvitacionB2B() {
                 </select>
               </label>
 
-              {message ? (
-                <h2 style={{ marginTop: 15,  marginBottom: 15, textDecoration: "underline" }}>
-                  {message}
-                </h2>
-              ) : null}
               {!loading ? (
                 <button
                   className="btn-submit"

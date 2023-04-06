@@ -102,6 +102,12 @@
   height: auto;
   border: solid 2px #ffff54;
 }
+
+.textPositionB2B {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-decoration: "underline";
+}
 /* <----- form -----> */
 form {
   display: flex;
@@ -375,18 +381,18 @@ footer {
     flex-direction: column;
   }
   .ctn-touken {
-    height: 75px;
+    /* height: 75px; */
     margin-top: 0px;
   }
   .titleB2B {
-    margin: 16px 16px 0px 16px;
-    width: 310px;
+    /* margin: 16px 16px 0px 16px; */
+    width: 305px;
     height: 185px;
     font-size: 20px;
     line-height: 28px;
   }
   .titleB2C {
-    margin: 0px 10px 0px 10px;
+    /* margin: 0px 10px 0px 10px; */
     width: 310px;
     height: 195px;
     font-size: 20px;
@@ -404,7 +410,7 @@ footer {
     padding: 0px 15px 0px 0px;
   }
   .logo-ft {
-    margin: 0px 18px 0px 0px;
+    margin: 0px 10px 0px 0px;
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;

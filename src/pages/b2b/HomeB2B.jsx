@@ -25,22 +25,31 @@ function HomeB2B() {
       <figure className="ctnLogo">
         <img className="logoHome" src={touken} alt={touken} />
       </figure>
-      <div>
-        <h1 className="titleB2B">Co-crea y crece con tu</h1>
-        <strong>
-          <h1>
-            <span
-              className="subtitle"
-              style={{
-                marginLeft: animation ? "0px" : "-100%",
-                transition: "1s",
-              }}
-            >
-              comunidad
-            </span>
-          </h1>
-        </strong>
-      </div>
+
+      <h1
+        className="titleB2BHome"
+        style={
+          {
+            // width: "576px",
+            // height: "58px",
+          }
+        }
+      >
+        Co-crea y crece con
+      </h1>
+      <strong>
+        <h1>
+          <span
+            className="subtitle"
+            style={{
+              marginLeft: animation ? "-172px" : "-100%",
+              transition: "1s",
+            }}
+          >
+            tu comunidad
+          </span>
+        </h1>
+      </strong>
 
       <Link className="link" to="/invitacionb2b">
         <div className="link-submit">
