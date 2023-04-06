@@ -30,7 +30,7 @@ function HomeB2C() {
         <strong>
           <h1>
             <span
-              className="subtitle"
+              className="subtitleB2C"
               style={{
                 marginLeft: animation ? "0px" : "-100%",
                 transition: "1s",
