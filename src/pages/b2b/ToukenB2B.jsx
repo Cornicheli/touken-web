@@ -34,7 +34,14 @@ export default function ToukenB2B() {
       <figure className="ctn-touken">
         <img className="iconTouken" src={touken} alt="touken" />
       </figure>
-      <section>
+      <section
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <div>
           <h2 className="titleTouken" style={{ fontFamily: "Aileron" }}>
             {" "}
@@ -52,6 +59,7 @@ export default function ToukenB2B() {
         <figure className="ctnGifTwo">
           <img className="gifTwo" src={gifTwo} alt="icon touken" />
         </figure>
+
         <div className="ctn-link-touken">
           <h2 className="textFriend" style={{ fontFamily: "Aileron" }}>
             <strong>Invita</strong> a otros <strong> creadores </strong>{" "}

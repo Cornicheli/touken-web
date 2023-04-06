@@ -128,7 +128,13 @@ export default function InvitacionB2B() {
               </label>
 
               {message ? (
-                <h2 style={{ marginTop: 15, textDecoration: "underline" }}>
+                <h2
+                  style={{
+                    marginTop: 15,
+                    marginBottom: 15,
+                    textDecoration: "underline",
+                  }}
+                >
                   {message}
                 </h2>
               ) : null}
