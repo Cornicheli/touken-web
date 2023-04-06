@@ -127,7 +127,6 @@ export default function InvitacionB2B() {
                 </select>
               </label>
 
-              {message ? <h2 className="textPositionB2B">{message}</h2> : null}
               {!loading ? (
                 <button
                   className="btn-submit"
