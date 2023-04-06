@@ -64,6 +64,7 @@
   width: 746px;
   font-family: "Aileron";
   font-weight: 400;
+  margin-top: 25px;
 }
 
 .titleB2B {
@@ -381,7 +382,7 @@ footer {
     flex-direction: column;
   }
   .ctn-touken {
-    /* height: 75px; */
+    height: 85px;
     margin-top: 0px;
   }
   .titleB2B {
@@ -389,10 +390,10 @@ footer {
     width: 305px;
     height: 185px;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 35px;
   }
   .titleB2C {
-    /* margin: 0px 10px 0px 10px; */
+    margin-top: 0px;
     width: 310px;
     height: 195px;
     font-size: 20px;
@@ -455,6 +456,9 @@ footer {
 }
 
 @media screen and (max-width: 450px) {
+  .ctnInv {
+    min-height: 55vh;
+  }
   .Invitacion {
     padding-left: 10px;
     padding-right: 10px;
