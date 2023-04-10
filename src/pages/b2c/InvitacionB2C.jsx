@@ -44,7 +44,12 @@ export default function InvitacionB2C() {
   return (
     <>
       <main className="Invitacion">
-        <figure className="ctn-touken">
+        <figure
+          className="ctn-touken"
+          style={{
+            backdropFilter: "blur(10px)",
+          }}
+        >
           <img className="icon-touken" src={touken} alt="touken" />
         </figure>
         <section className="ctnInv">
