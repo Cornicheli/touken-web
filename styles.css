@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Aileron';
+    src: url('/src/font/aileron-regular-webfont.woff2') format('woff2'),
+         url('/src/font/aileron-regular-webfont.woff') format('woff'),
+         url('/src/font/aileron-regular-webfont.ttf') format('truetype');
+  }
+  
+  body {
+    font-family: 'Aileron', sans-serif;
+  }

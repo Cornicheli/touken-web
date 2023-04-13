@@ -1,35 +1,94 @@
+@import url("https://fonts.cdnfonts.com/css/aileron");
+
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  font-family: serif;
+  overflow-x: hidden;
+  font-style: normal;
 }
 
 .ctn-main {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   align-items: center;
   min-height: 100vh;
-  background-image: url("../img//bg-splash.png");
+  background-image: url("../img/bg-carga-inicio.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-section {
+.ctnMainHome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("../img/bg-carga-inicio.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.img-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.img-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 48px;
+}
+/* section {
   display: flex;
   justify-content: space-evenly;
   min-height: 65vh;
+} */
+.ml-100 {
+  margin-left: 100px;
 }
-
+.mr-100 {
+  margin-right: 100px;
+}
 /* < -------------------- main -------------------- > */
 
-.title {
+.titleB2BHome {
+  font-style: normal;
   line-height: 45px;
-  font-size: 48px;
-  font-weight: 500;
+  font-size: 40px;
+  font-weight: 400;
+  overflow: hidden;
+  height: 58px;
 }
+
+.titleB2C2 {
+  font-style: normal;
+  line-height: 45px;
+  font-size: 40px;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.subtitle {
+  position: absolute;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subtitleB2C {
+  position: absolute;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* < -------------------- main -------------------- > */
 
 /* < -------------------- IMG - LOGO -------------------- > */
@@ -39,9 +98,37 @@ section {
   justify-content: center;
 }
 
-.logo {
-  width: 85%;
+.ctnLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 416px;
+  height: 85px;
+  margin-bottom: 51px;
+  /* margin-top: 376px; */
 }
+
+.ctnLogo1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 416px;
+  height: 85px;
+  /* margin-bottom: 51px; */
+  /* margin-top: 376px; */
+  overflow: hidden;
+}
+
+.logoHome {
+  position: absolute;
+  width: 416px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* .logo {
+  width: 85%;
+} */
 
 .logo-touken {
   border: solid 3px black;
@@ -58,18 +145,24 @@ section {
 /* < -------------------- IMG - LOGO -------------------- > */
 
 .link {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   border: solid 2px black;
-  border-radius: 1rem;
-  min-width: 50%;
-  height: 3.5rem;
+  border-radius: 50px;
   margin: 0.5rem;
   background-color: #7a33ff;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-end;
+  width: 415px;
+  height: 70px;
+  z-index: 9999;
+  overflow: hidden;
+  margin-top: 100px;
 }
 
-button {
+.btn-link {
   border: none;
   height: 100%;
   width: 30%;
@@ -79,15 +172,51 @@ button {
   border-radius: 1rem;
 }
 
-button:hover {
+.btn-link:hover {
   background-color: rgb(0, 179, 0);
   border: solid 2px black;
 }
 
 .link-submit {
   text-decoration: none;
-  color: black;
-  overflow: hidden;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 5px; */
+  height: 70px;
+}
+.invitation-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  font-style: normal;
+}
+.icon-tile {
+  /* margin-right: 90px; */
+  transition: all 0.3s ease-out;
+  font-size: 40px;
+  margin-top: -10px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+.link:hover .icon-tile {
+  margin-right: 0px;
+  transition: all 0.3s ease-out;
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.link:hover .invitation-tile {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease-in;
 }
 
 .ctn-link {
@@ -100,4 +229,95 @@ button:hover {
   border-radius: 1rem;
   background-color: greenyellow;
   margin: 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .image-container {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .logoHome {
+    width: 400px;
+  }
+  .titleB2B2,
+  .titleB2BHome {
+    font-size: 20px;
+  }
+  .ctnLogo {
+    margin-bottom: 45px;
+    width: 276px;
+    height: 56px;
+  }
+
+  .titleB2C2 {
+    width: 265px;
+    /* height: 58px; */
+    font-size: 20px;
+  }
+  .link {
+    margin-top: 70px;
+    width: 328px;
+    height: 50px;
+  }
+  .link-submit {
+    height: auto;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .subtitleB2C {
+    font-size: 20px;
+  }
+  .ctnMainHome {
+    background-image: url("../img/bg-carga-inicio-responsive.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .img-button,
+  .img-top {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .subtitle {
+    width: 215px;
+  }
+  .subtitleB2C {
+    width: 113px;
+  }
+  .titleB2BHome {
+    width: 265px;
+    height: 45px;
+  }
+  .ctnMainHome {
+    background-image: url("../img/bg-carga-inicio-responsive.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .ctnLogo {
+    margin-bottom: 45px;
+    width: 276px;
+    height: 56px;
+  }
+  .logoHome {
+    width: 355px;
+    /* margin-left: 40px; */
+    margin-right: 40px;
+  }
+
+  .link {
+    position: relative;
+    z-index: 9999;
+    width: 300px;
+    height: 50px;
+  }
+  .ctn-logo {
+    margin-top: 5rem;
+    position: relative;
+    z-index: 9999;
+  }
 }

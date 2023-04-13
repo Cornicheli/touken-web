@@ -2,21 +2,28 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  font-family: serif;
 }
 
 /* <----- header -----> */
 
-.ctn-touken {
+.ctnTouken {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 10vh;
-  margin-top: 36px;
+  width: 100%;
+  position: fixed;
 }
 
 .icon-touken {
-  height: 3rem;
+  width: 250px;
+  height: 85px;
+  position: fixed;
+}
+
+.iconTouken {
+  width: 250px;
+  height: 85px;
 }
 
 /* <----- header -----> */
@@ -26,39 +33,57 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   min-height: 100vh;
-  background-image: url("../img//bg-splash.png");
+  background-image: url("../img/bg-large.png");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 }
 
-section {
+.toukenTwo {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   min-height: 70vh;
 }
 
+.touken-three {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15vh;
+  justify-content: space-between;
+}
+
 .title-touken {
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
   text-align: center;
-  font-size: 48px;
-  font-weight: 500;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 75px;
 }
 
 .sub-title-touken {
-  margin-top: 1rem;
   text-align: center;
-  font-size: 48px;
-  font-weight: 500;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 50px;
 }
 
 .ctn-link-touken {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.ctn-link-toukenb2c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ctn-logo-invb2c {
+  margin-top: 70px;
+  margin-bottom: 100px;
 }
 
 .link-text-touken {
@@ -79,14 +104,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 7vh;
+  min-height: 16vh;
 }
 
-.proyect {
-  margin-left: 1rem;
-  margin-bottom: 36px;
+.imgFooter {
+  width: 100%;
 }
-
 .myproyect {
   display: flex;
   align-items: center;
@@ -104,6 +127,10 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+  .ctn-logo-invb2c {
+    margin-top: 33px;
+    margin-bottom: 55px;
+  }
   .proyect-touken {
     display: none;
   }
@@ -115,5 +142,92 @@ footer {
   }
   .link-text-touken {
     font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .link {
+    width: 305px;
+    height: 48px;
+    margin-top: 75px;
+  }
+  .link-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 328px;
+    height: 48px;
+  }
+  .textTouken {
+    width: 328px;
+    margin: 0px 16 0px 16px;
+  }
+  .title-touken {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    width: 328px;
+    /* height: 100px; */
+  }
+  .sub-title-touken {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    width: 328px;
+  }
+  .ctn-logo-inv {
+    margin: 30px 0px 30px 0px;
+    width: 156px;
+    height: 175px;
+  }
+  .img-logo-inv {
+    width: 100%;
+  }
+  .link-text-touken {
+    margin: 0px 0px 13px 0px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .link-logo {
+    width: 50px;
+    height: 50px;
+  }
+  .imgToukenArrow {
+    width: 44px;
+    height: 40px;
+  }
+
+  .titleTouken {
+    width: 328px;
+    /* height: 104px; */
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .ctnGifTwo {
+    margin: 25px 0px 40px 0px;
+  }
+
+  .textFriend {
+    width: 328px;
+    height: 72px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .link-submit {
+    font-weight: 400;
+    font-size: 20px;
+    /* line-height: 28px; */
+    text-align: center;
+  }
+
+  .ctn-logo-invb2c {
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
 }
