@@ -301,6 +301,11 @@ footer {
 }
 /* <----- footer ------> */
 @media screen and (max-width: 850px) {
+  .titleB2C {
+    height: 385px;
+    width: auto;
+    margin-right: 0px;
+  }
   .title {
     width: 100%;
   }
@@ -326,6 +331,11 @@ footer {
   }
 }
 @media only screen and (max-width: 768px) {
+  .titleB2C {
+    height: 385px;
+    width: auto;
+    margin-right: 0px;
+  }
   .select-input,
   .text-social-input {
     width: 500px;
@@ -395,7 +405,7 @@ footer {
   .titleB2C {
     margin-top: 0px;
     width: 310px;
-    height: 195px;
+    height: 230px;
     font-size: 20px;
     line-height: 28px;
   }
