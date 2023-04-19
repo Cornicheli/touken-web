@@ -26,7 +26,7 @@ function HomeB2C() {
         <img className="logoHome" src={touken} alt={touken} />
       </figure>
       <div>
-        <h1 className="titleB2C2">Co-crea y crece con tu </h1>
+        <h1 className="titleB2C2">Co-crea y crece con tus marcas </h1>
         <strong>
           <h1>
             <span
@@ -36,7 +36,7 @@ function HomeB2C() {
                 transition: "1s",
               }}
             >
-              comunidad
+              favoritas y gana recompensas
             </span>
           </h1>
         </strong>
