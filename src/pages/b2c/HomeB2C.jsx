@@ -1,10 +1,11 @@
 import React from "react";
 import { Link, Navigate } from "react-router-dom";
 import touken from "../../img/touken.png";
-import "../../style/home.css";
-// import gif from "../../img/gif.gif";
 import pieza1 from "../../img/pieza1.png";
 import pieza2 from "../../img/pieza2.png";
+import { Slide } from "react-reveal";
+
+import "../../style/home.css";
 
 function HomeB2C() {
   const [divOpacity, setDivOpacity] = React.useState(0);
@@ -29,15 +30,19 @@ function HomeB2C() {
         <h1 className="titleB2C2">Co-crea y crece con tus marcas </h1>
         <strong>
           <h1>
-            <span
-              className="subtitleB2C"
-              style={{
-                marginLeft: animation ? "0px" : "-100%",
-                transition: "1s",
-              }}
-            >
-              favoritas y gana recompensas
-            </span>
+            <Slide left>
+              <span
+                className="subtitleB2C"
+                // style={
+                //   {
+                //     marginLeft: animation ? "0px" : "-100%",
+                //     transition: "1s",
+                //   }
+                // }
+              >
+                favoritas y gana recompensas
+              </span>
+            </Slide>
           </h1>
         </strong>
       </div>

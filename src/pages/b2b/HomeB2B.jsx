@@ -3,7 +3,8 @@ import { Link, Navigate } from "react-router-dom";
 import touken from "../../img/touken.png";
 import pieza1 from "../../img/pieza1.png";
 import pieza2 from "../../img/pieza2.png";
-// import gif from "../../img/gif.gif";
+import { Slide } from "react-reveal";
+
 import "../../style/home.css";
 
 function HomeB2B() {
@@ -25,31 +26,26 @@ function HomeB2B() {
       <figure className="ctnLogo">
         <img className="logoHome" src={touken} alt={touken} />
       </figure>
-
-      <h1
-        className="titleB2BHome"
-        style={
-          {
-            // width: "576px",
-            // height: "58px",
-          }
-        }
-      >
-        Co-crea y crece con
-      </h1>
-      <strong>
-        <h1>
-          <span
-            className="subtitle"
-            style={{
-              marginLeft: animation ? "-172px" : "-100%",
-              transition: "1s",
-            }}
-          >
-            tu comunidad
-          </span>
-        </h1>
-      </strong>
+      <div>
+        <h1 className="titleB2BHome">Co-crea y crece con</h1>
+        <strong>
+          <h1>
+            <Slide left>
+              <span
+                className="subtitle"
+                // style={
+                //   {
+                //     marginLeft: animation ? "-172px" : "-100%",
+                //     transition: "1s",
+                //   }
+                // }
+              >
+                tu comunidad
+              </span>
+            </Slide>
+          </h1>
+        </strong>
+      </div>
 
       <Link className="link" to="/invitacionb2b">
         <div className="link-submit">
